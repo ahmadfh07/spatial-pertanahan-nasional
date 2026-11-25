@@ -1,0 +1,123 @@
+kode8,nama,kecamatan,kabupaten,provinsi,luas_desa,jumlah_persil,luas_persil,coverage,kosong_share_luas,outlier_culprit,reason
+02122201,AEK KORSIK,AEK KUO,Labuhan Batu,Sumatera Utara,1.75882e+08,1085,853806244081,4854.41,0.999864,parcel area (village looks normal),parcel/village area > 10x
+05041316,TERUSAN BERINGIN JAYA,PELANGIRAN,INDRAGIRI HILIR,Riau,2.07442e+07,881,136395685386,6575.11,0.999958,parcel area (village looks normal),parcel/village area > 10x
+14090501,SEDAU,Singkawang Selatan,Singkawang,Kalimantan Barat,7.17359e+07,21164,34775542766,484.772,0.998931,parcel area (village looks normal),parcel/village area > 10x
+12341305,Gelang,Sumberbaru,Jember,Jawa Timur,5.35665e+07,4361,13863865608,258.816,0.00195089,parcel area (village looks normal),parcel/village area > 10x
+32010203,Mapur,Bintan Pesisir,Bintan,Kepulauan Riau,2.84587e+07,590,8490548124,298.347,0.99891,parcel area (village looks normal),parcel/village area > 10x
+15051303,Pelantaran,Cempaga Hulu,Kotawaringin Timur,Kalimantan Tengah,1.32022e+08,2020,8056485959,61.0236,0.996556,parcel area (village looks normal),parcel/village area > 10x
+12251514,Klampitan,Purwoasri,Kediri,Jawa Timur,2.26938e+06,1338,5162179730,2274.71,0.999759,parcel area (village looks normal),parcel/village area > 10x
+32010202,Numbing,Bintan Pesisir,Bintan,Kepulauan Riau,4.32237e+07,486,3900306847,90.2353,0.993418,parcel area (village looks normal),parcel/village area > 10x
+32010904,Toapaya Selatan,Toapaya,Bintan,Kepulauan Riau,3.45542e+07,8629,3231226307,93.5117,0.995136,parcel area (village looks normal),parcel/village area > 10x
+04090410,TELANG,BAYUNG LENCIR,MUSI BANYUASIN,Sumatera Selatan,4.48387e+07,737,2351730655,52.4487,0.998254,parcel area (village looks normal),parcel/village area > 10x
+05110804,MEREDAN,TUALANG,SIAK,Riau,1.65032e+08,1292,2050891833,12.4272,0.00756393,parcel area (village looks normal),parcel/village area > 10x
+02021612,MEKAR MAKMUR,SEI LEPAN,LANGKAT,Sumatera Utara,1.76622e+08,282,2007743631,11.3674,0.0030052,village area or both,parcel/village area > 10x
+10260903,JATIKARYA,JATISAMPURNA,BEKASI,Jawa Barat,5.1535e+06,11344,1831177987,355.327,0.998126,parcel area (village looks normal),parcel/village area > 10x
+19110201,Koja,Pipikoro,Sigi,Sulawesi Tengah,4.68811e+06,29,1824396935,389.154,1,parcel area (village looks normal),parcel/village area > 10x
+08071803,BANJAR MASIN,KOTA AGUNG BARAT,TANGGAMUS,Lampung,2.99095e+06,702,1513987380,506.19,0.998948,parcel area (village looks normal),parcel/village area > 10x
+11120211,Wulung,Randublatung,Blora,Jawa Tengah,4.35517e+06,3360,1277565452,293.344,0.997833,parcel area (village looks normal),parcel/village area > 10x
+15080503,Muara Babuat,Permata Intan,Murung Raya,Kalimantan Tengah,9.25304e+06,431,997030149,107.752,0.999817,parcel area (village looks normal),parcel/village area > 10x
+32010201,Kelong,Bintan Pesisir,Bintan,Kepulauan Riau,3.37753e+07,1374,915056036,27.0925,0.983032,parcel area (village looks normal),parcel/village area > 10x
+17030507,Sungai Salai,Candi Laras Utara,Tapin,Kalimantan Selatan,5.13075e+07,1798,845362202,16.4764,0.982182,parcel area (village looks normal),parcel/village area > 10x
+11111806,Mojo,Cluwak,Pati,Jawa Tengah,8.59207e+06,3034,823691737,95.8665,0.995815,parcel area (village looks normal),parcel/village area > 10x
+02250806,Traju,Siempat Rube,Pakpak Bharat,Sumatera Utara,2.02537e+06,857,738169842,364.462,0.999247,parcel area (village looks normal),parcel/village area > 10x
+02040514,Simalingkar A,Pancur Batu,Deli Serdang,Sumatera Utara,1.07688e+07,5699,615892960,57.1924,0.000741262,parcel area (village looks normal),parcel/village area > 10x
+29030115,Aik Ketekok,Tanjungpandan,Belitung,Kepulauan Bangka Belitung,2.01707e+06,1126,484646406,240.272,0.000332857,village area or both,parcel/village area > 10x
+02042502,Pematang Johar,Labuhan Deli,Deli Serdang,Sumatera Utara,1.6727e+07,1941,423271297,25.3046,0.00186813,parcel area (village looks normal),parcel/village area > 10x
+19111207,SOI,Marawola Barat,Sigi,Sulawesi Tengah,429591,3,415526796,967.262,0.999999,village area or both,parcel/village area > 10x
+08011207,Rajabasa Jaya,Rajabasa,Bandar Lampung,Lampung,4.87849e+06,3998,345211683,70.762,0.996245,parcel area (village looks normal),parcel/village area > 10x
+08110214,Sidomulyo,Negeri Katon,Pesawaran,Lampung,9.79242e+06,2904,315221826,32.1904,0.434933,parcel area (village looks normal),parcel/village area > 10x
+17080810,Martadah Baru,Tambang Ulang,Tanah Laut,Kalimantan Selatan,6.80658e+06,1440,280980609,41.2808,0.000470755,parcel area (village looks normal),parcel/village area > 10x
+19111210,Taipanggabe,Marawola Barat,Sigi,Sulawesi Tengah,485649,3,254746650,524.549,0.999996,village area or both,parcel/village area > 10x
+02211419,GUNUNG MONAKO,SIPISPIS,SERDANG BEDAGAI,Sumatera Utara,1.29645e+07,68,232469737,17.9312,0.000581534,parcel area (village looks normal),parcel/village area > 10x
+12211303,KATIKAN,KEDUNGGALAR,NGAWI,Jawa Timur,1.47142e+07,5739,221246041,15.0362,0.010968,parcel area (village looks normal),parcel/village area > 10x
+02072310,Sukadamai,Pulo Bandring,ASAHAN,Sumatera Utara,1.54722e+07,1000,212031895,13.704,0.996839,parcel area (village looks normal),parcel/village area > 10x
+32010301,Tanjung Uban,Bintan Utara,Bintan,Kepulauan Riau,3.2208e+06,2049,204670902,63.5466,0.983188,parcel area (village looks normal),parcel/village area > 10x
+10052304,Sukabungah,BOJONG MANGU,BEKASI,Jawa Barat,7.02555e+06,4359,200720618,28.5701,0.977052,parcel area (village looks normal),parcel/village area > 10x
+19100409,Balanggala,Ampana Tete,Tojo Una-Una,Sulawesi Tengah,8.67296e+06,1289,200475425,23.115,0.990797,parcel area (village looks normal),parcel/village area > 10x
+12370702,JAJAG,GAMBIRAN,BANYUWANGI,Jawa Timur,7.09223e+06,7600,187784386,26.4775,0.00421001,parcel area (village looks normal),parcel/village area > 10x
+31030405,Tonrolima,MATAKALI,POLEWALI MANDAR,Sulawesi Barat,9.38601e+06,1245,159091044,16.9498,0.985343,parcel area (village looks normal),parcel/village area > 10x
+16030000,,,Kutai Kartanegara,Kalimantan Timur,4.62266e+07,522,144188496,3.11917,0.30529,,pseudo-record
+12300910,Jeru,Turen,Malang,Jawa Timur,3.53421e+06,3377,138914251,39.3056,0.00152398,parcel area (village looks normal),parcel/village area > 10x
+19110608,Rejeki,Palolo,Sigi,Sulawesi Tengah,9.21384e+06,238,136487581,14.8133,0.98737,parcel area (village looks normal),parcel/village area > 10x
+16010403,SIDOMULYO,SAMARINDA ILIR,Samarinda,Kalimantan Timur,1.14993e+06,3008,128971886,112.156,0.995877,parcel area (village looks normal),parcel/village area > 10x
+14050901,Kapuas Kanan Hulu,Sintang,Sintang,Kalimantan Barat,6.91283e+06,3838,124093444,17.9512,0.973217,parcel area (village looks normal),parcel/village area > 10x
+11331005,Blandongan,Banjarharjo,Brebes,Jawa Tengah,1.11894e+07,4850,113781975,10.1687,0.968898,parcel area (village looks normal),parcel/village area > 10x
+04080317,Banjar sari,Semidang Aji,Ogan Komering Ulu,Sumatera Selatan,9.31635e+06,541,110592760,11.8708,0.0224279,parcel area (village looks normal),parcel/village area > 10x
+19110607,Ampera,Palolo,Sigi,Sulawesi Tengah,4.49769e+06,124,93538176,20.7969,0.992423,parcel area (village looks normal),parcel/village area > 10x
+12230301,RONOWIJAYAN,SIMAN,PONOROGO,Jawa Timur,1.56516e+06,1854,82564429,52.7515,0.000706454,parcel area (village looks normal),parcel/village area > 10x
+02090206,Rabuhit,Gunung Maligas,Simalungun,Sumatera Utara,7.55388e+06,141,81452673,10.7829,0.498798,parcel area (village looks normal),parcel/village area > 10x
+18140608,SANGKUB I,SANGKUB,Bolaang Mongondow Utara,Sulawesi Utara,2.156e+06,530,80022373,37.1161,0.995639,parcel area (village looks normal),parcel/village area > 10x
+12361706,SUMBERDUMPYONG,PAKEM,BONDOWOSO,Jawa Timur,4.18216e+06,2183,77153051,18.4481,0.975303,parcel area (village looks normal),parcel/village area > 10x
+02091305,Dolok Ilir I,Dolok  Batu Nanggar,Simalungun,Sumatera Utara,5.80694e+06,890,74992099,12.9142,0.0134282,parcel area (village looks normal),parcel/village area > 10x
+08011108,Kemiling Raya,Kemiling,Bandar Lampung,Lampung,2.01927e+06,3295,74449072,36.8692,0.992093,parcel area (village looks normal),parcel/village area > 10x
+25020502,Revav,Kei Kecil Timur,Maluku Tenggara,Maluku,5.47282e+06,313,68839833,12.5785,0.997674,parcel area (village looks normal),parcel/village area > 10x
+02092807,Bah Jambi I,Jawa Maraja Bah Jambi,Simalungun,Sumatera Utara,6.11582e+06,1,63329700,10.3551,0,parcel area (village looks normal),parcel/village area > 10x
+02211509,BATU 13,DOLOK MASIHUL,SERDANG BEDAGAI,Sumatera Utara,1.82628e+06,136,52890535,28.9609,0.000503285,parcel area (village looks normal),parcel/village area > 10x
+01180104,Matang Panyang,Langsa Timur,Langsa,Aceh,976685,349,50047432,51.2422,0.96739,parcel area (village looks normal),parcel/village area > 10x
+21050703,Anawai,Wua-wua,Kendari,Sulawesi Tenggara,3.64593e+06,7460,49469535,13.5684,0.946779,parcel area (village looks normal),parcel/village area > 10x
+25100216,NAMARA,ARU TENGAH,Kepulauan Aru,Maluku,1.37364e+06,890,48500428,35.3081,0.987628,parcel area (village looks normal),parcel/village area > 10x
+08010905,Sukarame Baru,Sukarame,Bandar Lampung,Lampung,2.61675e+06,5474,48248780,18.4384,0.975563,parcel area (village looks normal),parcel/village area > 10x
+22030507,MENGWITANI,MENGWI,BADUNG,Bali,4.58691e+06,6266,47935869,10.4506,0.916587,parcel area (village looks normal),parcel/village area > 10x
+08011101,Sumber Rejo,Kemiling,Bandar Lampung,Lampung,3.9299e+06,6222,40250082,10.242,0.962953,parcel area (village looks normal),parcel/village area > 10x
+11120511,Mulyorejo,Cepu,Blora,Jawa Tengah,3.1243e+06,1677,38197156,12.2258,0.00920396,parcel area (village looks normal),parcel/village area > 10x
+16020304,Muara Rapak,Balikpapan Utara,Balikpapan,Kalimantan Timur,3.17023e+06,6701,33258064,10.4907,0.0534507,parcel area (village looks normal),parcel/village area > 10x
+20030904,PARANGMATA,GALESONG,Takalar,Sulawesi Selatan,2.2792e+06,1322,32631504,14.3171,0.000264836,parcel area (village looks normal),parcel/village area > 10x
+12192007,MOJOASEM,LAREN,LAMONGAN,Jawa Timur,1.08094e+06,886,29261134,27.07,0.00954515,parcel area (village looks normal),parcel/village area > 10x
+08011102,Kemiling Permai,Kemiling,Bandar Lampung,Lampung,1.49902e+06,2406,25640128,17.1046,0.983456,parcel area (village looks normal),parcel/village area > 10x
+04010701,Sukabangun,Sukarami,Palembang,Sumatera Selatan,2.06668e+06,2887,23400741,11.3229,0.959166,parcel area (village looks normal),parcel/village area > 10x
+12261610,Jatirejo,Rejoso,NGANJUK,Jawa Timur,1.76161e+06,1475,21851909,12.4045,0.0346477,parcel area (village looks normal),parcel/village area > 10x
+08011104,Beringin Raya,Kemiling,Bandar Lampung,Lampung,1.71645e+06,4267,19197929,11.1847,0.942886,parcel area (village looks normal),parcel/village area > 10x
+10060907,Cikampek Timur,Cikampek,Karawang,Jawa Barat,631707,1643,18496258,29.2798,0.000651699,parcel area (village looks normal),parcel/village area > 10x
+15030111,Teluk Mampun,Dusun Selatan,Barito Selatan,Kalimantan Tengah,1.49745e+06,240,18364307,12.2637,0.985187,parcel area (village looks normal),parcel/village area > 10x
+11120701,Nglobo,Jiken,Blora,Jawa Tengah,1.62404e+06,1060,17323199,10.6667,0.925185,parcel area (village looks normal),parcel/village area > 10x
+33041005,Kapaurtutin,Pariwari,Fakfak,Papua Barat,431500,386,15276571,35.4034,0.988515,village area or both,parcel/village area > 10x
+10160508,Tanjungsari,Tanjungsari,SUMEDANG,Jawa Barat,984191,1398,10428566,10.5961,0.00141745,parcel area (village looks normal),parcel/village area > 10x
+03060125,Koto Tuo,Payakumbuh Barat,Payakumbuh,Sumatera Barat,45604.7,39,500440,10.9734,0.997992,village area or both,parcel/village area > 10x
+33000000,HGU,HGU,Manokwari,Papua Barat,1.5314e+10,53,346143,2.2603e-05,0.0915893,,pseudo-record
+03071301,Tarung - Tarung Utara (L),RAO MAPAT TUNGGUL,Pasaman,Sumatera Barat,246.2,1,3064,12.4452,1,village area or both,parcel/village area > 10x
+07040249,SUKAMERINDU,TELUK SEGARA,Bengkulu,Bengkulu,0,0,0,,,,zero village area
+07040257,PINTU BATU/WIL I,TELUK SEGARA,Bengkulu,Bengkulu,0,0,0,,,,zero village area
+07040220,Pasar Baru / Wil I,TELUK SEGARA,Bengkulu,Bengkulu,0,0,0,,,,zero village area
+07040215,SURABAYA,TELUK SEGARA,Bengkulu,Bengkulu,0,0,0,,,,zero village area
+05011208,Sungai Ukai,Rumbai Pesisir,Pekanbaru,Riau,0,0,0,,,,zero village area
+07040225,SUKAMERINDU/WIL IV,TELUK SEGARA,Bengkulu,Bengkulu,0,0,0,,,,zero village area
+02030608,Kep- Kampung Melayu,SIANTAR UTARA,PEMATANG SIANTAR,Sumatera Utara,0,0,0,,,,zero village area
+02030609,KAMPUNG SUKA DAME,SIANTAR UTARA,PEMATANG SIANTAR,Sumatera Utara,0,0,0,,,,zero village area
+02030808,KEPENGHULUAN SUKA MULIA,SIANTAR MARIMBUN,PEMATANG SIANTAR,Sumatera Utara,0,0,0,,,,zero village area
+03020120,Djorong Guguk Panjang,Guguk Panjang,Bukittinggi,Sumatera Barat,0,0,0,,,,zero village area
+03020220,Djorong Mandiangin,Mandiangin Koto Selayan,Bukittinggi,Sumatera Barat,0,0,0,,,,zero village area
+03100433,Simpuruik,Sungai Tarab,Tanah Datar,Sumatera Barat,0,0,0,,,,zero village area
+05011506,Sungai Sibam,Bina Widya,Pekanbaru,Riau,0,0,0,,,,zero village area
+02030809,KEPENGHULUAN SIMARIMBUN,SIANTAR MARIMBUN,PEMATANG SIANTAR,Sumatera Utara,0,0,0,,,,zero village area
+07040334,KEBUN TEBENG,GADING CEMPAKA,Bengkulu,Bengkulu,0,0,0,,,,zero village area
+07040354,KEBUN DAHRI,GADING CEMPAKA,Bengkulu,Bengkulu,0,0,0,,,,zero village area
+07040407,KANDANG,SELEBAR,Bengkulu,Bengkulu,0,0,0,,,,zero village area
+07040408,PAGAR DEWA / BU,SELEBAR,Bengkulu,Bengkulu,0,0,0,,,,zero village area
+07040610,SAWAH LEBAR / WIL. IV,RATU AGUNG,Bengkulu,Bengkulu,0,0,0,,,,zero village area
+07040611,KEBUN BELER / WIL. II,RATU AGUNG,Bengkulu,Bengkulu,0,0,0,,,,zero village area
+07040711,PADANG JATI / WIL. IV,RATU SAMBAN,Bengkulu,Bengkulu,0,0,0,,,,zero village area
+07040712,ANGGUT ATAS/WIL II,RATU SAMBAN,Bengkulu,Bengkulu,0,0,0,,,,zero village area
+07040312,PADANG HARAPAN /WIL.II,GADING CEMPAKA,Bengkulu,Bengkulu,0,0,0,,,,zero village area
+07040313,DUSUN BESAR / BU,GADING CEMPAKA,Bengkulu,Bengkulu,0,0,0,,,,zero village area
+07040315,Jembatan Kecil/ Wil II,GADING CEMPAKA,Bengkulu,Bengkulu,0,0,0,,,,zero village area
+07040321,SAWAH LEBAR,GADING CEMPAKA,Bengkulu,Bengkulu,0,0,0,,,,zero village area
+07040325,TANAH PATAH,GADING CEMPAKA,Bengkulu,Bengkulu,0,0,0,,,,zero village area
+07040327,PENGANTUNGAN,GADING CEMPAKA,Bengkulu,Bengkulu,0,0,0,,,,zero village area
+07040329,PADANG JATI,GADING CEMPAKA,Bengkulu,Bengkulu,0,0,0,,,,zero village area
+07040331,KEBUN BELER WIL.II,GADING CEMPAKA,Bengkulu,Bengkulu,0,0,0,,,,zero village area
+07040262,KAMPUNG KEPIRI,TELUK SEGARA,Bengkulu,Bengkulu,0,0,0,,,,zero village area
+09050408,Rawa Badak,Koja,Jakarta Utara,DKI Jakarta,0,0,0,,,,zero village area
+10159928,Pakemitan Kab,Kec Lama,Bandung,Jawa Barat,0,0,0,,,,zero village area
+10159940,Mandalamekar Kab,Kec Lama,Bandung,Jawa Barat,0,0,0,,,,zero village area
+11019916,SUMURGUNUNG,Kec. Hapus,SEMARANG,Jawa Tengah,0,0,0,,,,zero village area
+10159934,Mekarmulya Kab,Kec Lama,Bandung,Jawa Barat,0,0,0,,,,zero village area
+12069901,Lingkungan I,Kecamatan Lama,Malang,Jawa Timur,0,0,0,,,,zero village area
+10152209,Ujung Berung Selatan (LAMA/STOPPED),Ujungberung,Bandung,Jawa Barat,0,0,0,,,,zero village area
+19050354,TAMALANJA,Palu Selatan,Palu,Sulawesi Tengah,0,0,0,,,,zero village area
+19040222,Kalora,Poso Pesisir,Poso,Sulawesi Tengah,0,0,0,,,,zero village area
+19050351,LOLU,Palu Selatan,Palu,Sulawesi Tengah,0,0,0,,,,zero village area
+19050353,TATURA,Palu Selatan,Palu,Sulawesi Tengah,0,0,0,,,,zero village area
+19040220,Kilo Trans,Poso Pesisir,Poso,Sulawesi Tengah,0,0,0,,,,zero village area
+25100908,KOLAHA,SIR-SIR,Kepulauan Aru,Maluku,0,0,0,,,,zero village area
+32020310,Lubuk Baja Utara,BATAM TIMUR,Kota Batam,Kepulauan Riau,0,0,0,,,,zero village area
+32020204,Sekupang,BATAM BARAT,Kota Batam,Kepulauan Riau,0,0,0,,,,zero village area

@@ -1,0 +1,131 @@
+{
+  "created": "2026-11-25 19:54:45",
+  "environment": {
+    "python": "3.11.16",
+    "pandas": "3.0.5",
+    "numpy": "2.4.6"
+  },
+  "parameters": {
+    "RARE_AREA_SHARE": 0.01,
+    "RATIO_CAP": 10,
+    "ZERO_THRESH": 0.5,
+    "REF_YEAR": 2026,
+    "STRAY_MAX": 5,
+    "SEED": 42
+  },
+  "rights": {
+    "kept_separately": [
+      "hak_milik",
+      "hgb",
+      "hgu",
+      "hak_pakai",
+      "kosong"
+    ],
+    "grouped_into_other": [
+      "hak_pengelolaan",
+      "hak_wakaf",
+      "lainnya"
+    ]
+  },
+  "transform": "s_<right> = sqrt(area share of the right); log_parcel_density = log10(parcels per hectare); log_mean_parcel = log10(parcel area / parcel count in m2); log_luas_desa = log10(village area in m2); log1p_age_median = log(1 + REF_YEAR - tahun_median)",
+  "columns": {
+    "A": [
+      "s_hak_milik",
+      "s_hgb",
+      "s_hgu",
+      "s_hak_pakai",
+      "s_kosong",
+      "s_other",
+      "log_parcel_density",
+      "log_mean_parcel"
+    ],
+    "B": [
+      "s_hak_milik",
+      "s_hgb",
+      "s_hgu",
+      "s_hak_pakai",
+      "s_kosong",
+      "s_other",
+      "log_parcel_density",
+      "log_mean_parcel",
+      "log_luas_desa",
+      "log1p_age_median"
+    ]
+  },
+  "scaling": {
+    "A": {
+      "comp_cols": [
+        "s_hak_milik",
+        "s_hgb",
+        "s_hgu",
+        "s_hak_pakai",
+        "s_kosong",
+        "s_other"
+      ],
+      "other_cols": [
+        "log_parcel_density",
+        "log_mean_parcel"
+      ],
+      "center": {
+        "log_parcel_density": 0.19044585221412452,
+        "log_mean_parcel": 3.3079644555276553
+      },
+      "scale": {
+        "log_parcel_density": 0.9961172787914522,
+        "log_mean_parcel": 0.58091960966375
+      },
+      "comp_center": {
+        "s_hak_milik": 0.6945032294331408,
+        "s_hgb": 0.06405668160371947,
+        "s_hgu": 0.037207558950247896,
+        "s_hak_pakai": 0.16845300672619867,
+        "s_kosong": 0.47890176542799684,
+        "s_other": 0.028531386889615987
+      },
+      "comp_dof": 5,
+      "comp_factor": 4.439899363014144
+    },
+    "B": {
+      "comp_cols": [
+        "s_hak_milik",
+        "s_hgb",
+        "s_hgu",
+        "s_hak_pakai",
+        "s_kosong",
+        "s_other"
+      ],
+      "other_cols": [
+        "log_parcel_density",
+        "log_mean_parcel",
+        "log_luas_desa",
+        "log1p_age_median"
+      ],
+      "center": {
+        "log_parcel_density": 0.19952822873187945,
+        "log_mean_parcel": 3.3052104902223336,
+        "log_luas_desa": 6.6993373141117445,
+        "log1p_age_median": 2.1972245773362196
+      },
+      "scale": {
+        "log_parcel_density": 0.9878933546710694,
+        "log_mean_parcel": 0.5773340891577837,
+        "log_luas_desa": 0.5685418877752332,
+        "log1p_age_median": 0.5731578118854572
+      },
+      "comp_center": {
+        "s_hak_milik": 0.7005227791875713,
+        "s_hgb": 0.06461314406927737,
+        "s_hgu": 0.03753186670939297,
+        "s_hak_pakai": 0.16989986294277507,
+        "s_kosong": 0.4744046497586414,
+        "s_other": 0.02878007157650569
+      },
+      "comp_dof": 5,
+      "comp_factor": 4.481705311965646
+    }
+  },
+  "fit_set_sizes": {
+    "A": 77770,
+    "B": 77098
+  }
+}
