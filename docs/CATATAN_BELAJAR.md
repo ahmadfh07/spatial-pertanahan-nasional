@@ -8,7 +8,7 @@
 
 - [x] **Step 0:** Kenalan dari Nol — Spill The Tea Proyek & Drama Datanya
 - [x] **Step 1:** Cek Ombak — Kenalan sama `X_A_scaled.csv` & Uji *Cluster Tendency*
-- [ ] **Step 2:** Adu "Mak Comblang" — Eksperimen Algoritma Clustering (K-Means, GMM, HDBSCAN) & Pilih $k$
+- [x] **Step 2:** Adu "Mak Comblang" — Eksperimen Algoritma Clustering (K-Means, GMM, HDBSCAN) & Pilih $k$
 - [ ] **Step 3:** Tes Anti-Goyah — Uji Stabilitas & Sensitivitas (*Seed*, *Bootstrap*, Variant A vs B)
 - [ ] **Step 4:** Sesi Kepo — Cek Bias Geografis & Bongkar Profil Tiap Geng
 - [ ] **Step 5:** Kasih Julukan & Bikin Rekomendasi Kebijakan (Termasuk Grup `place_later`)
@@ -175,3 +175,70 @@ Tapi tunggu dulu — lihat grafik sebelah kiri di **Sel 1.5**:
    - **K-Means** (baseline cepat, membagi wilayah jarak secara tegas),
    - **GMM (Gaussian Mixture Model)** (cocok untuk awan kontinu/lonjong karena punya probabilitas keanggotaan *soft*),
    - **HDBSCAN** (berbasis kepadatan, buat melihat geng padat mana yang muncul alami dan mana yang jadi wilayah transisi).
+
+---
+
+## Step 2: Adu "Mak Comblang" — Eksperimen Algoritma Clustering (K-Means, GMM, HDBSCAN) & Pilih $k$
+
+> Notebook: `modeling/clustering.ipynb` (Sel 2.1–2.5) | Ringkasan angka: `modeling/outputs/step2_summary.json` | Semua grafik tampil *inline* di dalam notebook
+
+### 1. Cara kerja 3 "mak comblang" yang kita adu
+Supaya nggak fanatik sama satu metode, kita suruh 3 algoritma dengan karakter beda buat mengelompokkan **77.770 desa** di `X_A_scaled`:
+- **K-Means ($k = 2 \dots 10$):** Memotong ruang jadi $k$ geng dengan garis batas tegas berdasarkan jarak paling dekat ke pusat geng.
+- **GMM Full ($k = 2 \dots 10$):** Bentuk geng boleh lonjong/miring (*elips*) dan tiap desa dikasih skor keyakinan (*probabilitas*), jadi ketahuan berapa persen desa yang "ragu" di perbatasan.
+- **HDBSCAN (4 kombinasi `min_cluster_size`):** Nggak dipaksa milih jumlah $k$ — dia cari sendiri kelompok yang benar-benar padat, dan desa yang nanggung/renggang dicap **`-1` (Noise / Transisi)**.
+
+---
+
+### 2. Kamus kilat metrik rapor (biar nggak bingung baca tabel)
+- **Elbow (*Inertia*):** Jarak total desa ke pusat gengnya — makin banyak geng ($k$ naik), pasti makin turun; kita cari titik "siku" tempat penurunannya mulai melandai.
+- **Silhouette Score (sampel 10.000 desa):** Seberapa akur desa dengan gengnya sendiri dibanding geng tetangga (*lebih tinggi = lebih bagus*, mendekati `0` = mepet/tumpang tindih).
+- **Davies-Bouldin Index:** Mengukur tingkat kemiripan/tumpukan antargeng (*lebih rendah = lebih bagus*).
+- **BIC (khusus GMM) & `% Desa Ragu`:** BIC menyeimbangkan kecocokan model vs kerumitan (*lebih rendah = lebih bagus*), sedangkan `% Desa Ragu` menghitung proporsi desa yang probabilitas terkuatnya `< 0,80`.
+
+---
+
+### 3. Hasil gosip paling panas: siapa menang & apa plot twist-nya?
+
+1. **Plot Twist #1 — HDBSCAN membongkar "Benua Raksasa":**
+   - Pada konfigurasi paling pas (`min_cluster_size=500, min_samples=50`), HDBSCAN cuma menemukan **3 kelompok padat alami** plus **19,65% desa (`15.283` desa) dicap *noise*/transisi**:
+     - **C1 (`78,56%` / `61.094` desa):** Seluruh spektrum **SHM ↔ Campuran ↔ Kosong** nyambung jadi **satu benua besar tanpa jurang pemisah**!
+     - **C2 (`1,03%` / `804` desa):** Pulau kecil **HGU murni** (median HGU `77,3%`).
+     - **C0 (`0,76%` / `589` desa):** Pulau kecil **Hak Pakai ekstrem** (median Hak Pakai `100,0%`, median hanya `2` persil).
+   - Kalau batas kepadatannya diperketat (`mcs=1000`), `84,7%` desa langsung jadi *noise*; di `mcs=2000`, `100%` jadi *noise*.
+   - **Maknanya:** HDBSCAN sukses besar sebagai **detektor realitas** (membuktikan HGU & Hak Pakai ekstrem memang pulau nyata), tapi **nggak cocok jadi segmentasi kebijakan nasional** karena 78,6% desa digabung dalam satu karung raksasa + 19,7% dibiarkan tanpa label.
+
+2. **Plot Twist #2 — GMM malah kewalahan dan tumpang tindih!**
+   - Di teori, GMM sering dijagokan untuk data lonjong. Tapi begitu masuk $k \ge 3$, **Silhouette GMM anjlok drastis ke `0,04–0,075`** (bahkan minus di $k \ge 8$) dan **Davies-Bouldin bengkak ke `2,07–3,37`** (jauh lebih jelek daripada K-Means `1,06–1,39`).
+   - Penyebabnya kelihatan jelas di grafik PCA (Sel 2.5 Panel 3): komponen elips GMM saling bertumpuk di ruang kontinum simplex (C1 dan C2 di kanan tumpang tindih), dan BIC terus meluncur turun sampai $k=10$ karena berusaha menambal bentuk non-Gaussian.
+   - Kesepakatan (**ARI**) antara K-Means dan GMM juga rendah (`0,24–0,29`), tanda pembelahan GMM di kontinum ini kurang rapi.
+
+3. **Pemenangnya — K-Means, dan duel seru $k = 4$ vs $k = 5$:**
+   - **K-Means jauh paling rapi & konsisten:**
+     - **Silhouette** puncak terbaik di **$k=3$ (`0,2953`)** dan **$k=5$ (`0,2942`)** — turun lagi kalau dipaksa ke $k=6$ (`0,2700`).
+     - **Davies-Bouldin** mencapai titik **terendah terbaik tepat di $k = 5$ (`1,0600`)** sebelum naik lagi di $k=6$ (`1,1144`).
+   - **Kenapa $k = 5$ jauh lebih seksi daripada $k = 4$?**
+     - Antara `KM_k4` dan `KM_k5`, **ARI = `0,941`** (hampir identik!). Bedanya cuma satu langkah cerdas: di $k=4$, kelompok spesial `6,0%` masih mencampur **HGU** dan **Hak Pakai** jadi satu geng. Begitu dinaikkan ke **$k=5$**, si `6,0%` itu terbelah rapi jadi dua kantong berbeda tanpa mengganggu 3 geng utama!
+
+---
+
+### 4. Intipan 5 Geng K-Means ($k = 5$) di `X_A_scaled`
+*(Baru intipan cepat dari Sel 2.5 — profiling lengkap pakai banjir, RDTR, tahun, dan provinsi bakal kita bedah di Step 4!)*
+
+| Geng (`KM_k5`) | Jumlah Desa (%) | Median SHM | Median Kosong | Median HGU | Median Hak Pakai | Median Persil | % Kelurahan | Watak Awal |
+| :--- | :---: | :---: | :---: | :---: | :---: | :---: | :---: | :--- |
+| **C4** | 24.860 (`31,97%`) | **92,4%** | 2,3% | 0,0% | 0,8% | 368 | 13,5% | **Matang SHM** (sudah rapi bersertifikat) |
+| **C2** | 27.696 (`35,61%`) | **58,0%** | **30,8%** | 0,0% | 4,0% | **2.088** | **28,7%** | **Transisi / Urban-Padat Campuran** (persil terbanyak, banyak Kelurahan) |
+| **C1** | 19.360 (`24,89%`) | 19,7% | **76,9%** | 0,0% | 0,3% | 768 | 16,8% | **Dominan Kosong / Target Utama PTSL** |
+| **C3** | 3.068 (`3,94%`) | 10,4% | 7,3% | **64,2%** | 0,1% | 482 | 14,4% | **Kantong Perkebunan HGU** |
+| **C0** | 2.786 (`3,58%`) | 9,6% | 0,0% | 0,0% | **70,8%** | **9** | 14,2% | **Kantong Tanah Pemerintah / Hak Pakai** |
+
+---
+
+### 5. Vonis Step 2 (Bekal buat Step 3)
+- **Kandidat juara yang dibawa ke Step 3:** **`K-Means (k = 5)`** sebagai juara utama, dengan **`K-Means (k = 4)`** sebagai pembanding terdekat (dan catatan perilaku kontinum dari HDBSCAN).
+- **Yang wajib diuji di Step 3 (Tes Anti-Goyah):** Apakah 5 geng K-Means ini konsisten kalau:
+  1. Acak ulang `random_state` (*multi-seed*)?
+  2. Diambil sampel acak berulang (*bootstrap*)?
+  3. Dibandingkan dengan **Variant B ([X_B_scaled.csv](file:///Users/otnansirk/S2-MMI/DATA-SCIENCE/spatial-pertanahan-nasional/data/clustering_ready/X_B_scaled.csv))** yang ikut memasukkan luas desa + usia pendaftaran?
+  4. Bobot blok komposisinya diubah (misal disamakan 50%:50% dengan kepadatan/ukuran)?

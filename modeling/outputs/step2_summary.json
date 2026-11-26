@@ -1,0 +1,696 @@
+{
+  "kmeans_metrics": [
+    {
+      "k": 2,
+      "inertia": 399195.52619758,
+      "silhouette_10k": 0.29348382160377734,
+      "calinski_harabasz": 30308.594096178407,
+      "davies_bouldin": 1.38901402916857,
+      "min_cluster_pct": 43.79066478076379,
+      "max_cluster_pct": 56.20933521923621
+    },
+    {
+      "k": 3,
+      "inertia": 324742.6486159039,
+      "silhouette_10k": 0.2952798319066991,
+      "calinski_harabasz": 27543.082994888362,
+      "davies_bouldin": 1.3331060150520253,
+      "min_cluster_pct": 11.22026488363122,
+      "max_cluster_pct": 44.521023530924516
+    },
+    {
+      "k": 4,
+      "inertia": 269027.1121568945,
+      "silhouette_10k": 0.2756577877519039,
+      "calinski_harabasz": 27533.12806828124,
+      "davies_bouldin": 1.2338268108595196,
+      "min_cluster_pct": 6.001028674296001,
+      "max_cluster_pct": 36.21062106210621
+    },
+    {
+      "k": 5,
+      "inertia": 230980.86443123966,
+      "silhouette_10k": 0.2942258542901801,
+      "calinski_harabasz": 27253.02700603045,
+      "davies_bouldin": 1.0599785899640968,
+      "min_cluster_pct": 3.582358235823582,
+      "max_cluster_pct": 35.61270412755561
+    },
+    {
+      "k": 6,
+      "inertia": 203621.9308081122,
+      "silhouette_10k": 0.2700181907025304,
+      "calinski_harabasz": 26821.360078584352,
+      "davies_bouldin": 1.1143875524730273,
+      "min_cluster_pct": 3.4447730487334445,
+      "max_cluster_pct": 29.196348206249194
+    },
+    {
+      "k": 7,
+      "inertia": 186542.99040360842,
+      "silhouette_10k": 0.25804712273299385,
+      "calinski_harabasz": 25583.777935158774,
+      "davies_bouldin": 1.0824843120647276,
+      "min_cluster_pct": 3.390767648193391,
+      "max_cluster_pct": 23.574643178603573
+    },
+    {
+      "k": 8,
+      "inertia": 172818.03290431053,
+      "silhouette_10k": 0.24419104362673902,
+      "calinski_harabasz": 24552.483420327655,
+      "davies_bouldin": 1.1412805797714483,
+      "min_cluster_pct": 3.311045390253311,
+      "max_cluster_pct": 20.1002957438601
+    },
+    {
+      "k": 9,
+      "inertia": 159704.6841174714,
+      "silhouette_10k": 0.25255298058067277,
+      "calinski_harabasz": 24045.121928550423,
+      "davies_bouldin": 1.0874571807009439,
+      "min_cluster_pct": 3.051305130513051,
+      "max_cluster_pct": 19.665680853799667
+    },
+    {
+      "k": 10,
+      "inertia": 151994.8986382684,
+      "silhouette_10k": 0.23919009147319403,
+      "calinski_harabasz": 22895.60111703146,
+      "davies_bouldin": 1.122960000032515,
+      "min_cluster_pct": 2.1885045647421886,
+      "max_cluster_pct": 18.44027259868844
+    }
+  ],
+  "gmm_metrics": [
+    {
+      "k": 2,
+      "bic": 463673.0478266454,
+      "delta_bic": 914430.2815046626,
+      "aic": 462848.7733448251,
+      "silhouette_10k": 0.34209338267718176,
+      "calinski_harabasz": 9414.20639864395,
+      "davies_bouldin": 1.418202412171764,
+      "mean_max_prob": 0.9989926964163239,
+      "uncertain_pct": 0.1915905876301916,
+      "min_cluster_pct": 6.501221550726501,
+      "max_cluster_pct": 93.4987784492735,
+      "converged": true
+    },
+    {
+      "k": 3,
+      "bic": 33983.156842260476,
+      "delta_bic": 484740.39052027767,
+      "aic": 32742.11436401415,
+      "silhouette_10k": 0.055020381548338174,
+      "calinski_harabasz": 6318.338438267768,
+      "davies_bouldin": 3.308913072415376,
+      "mean_max_prob": 0.9939802604807861,
+      "uncertain_pct": 1.0878230680210879,
+      "min_cluster_pct": 6.286485791436286,
+      "max_cluster_pct": 47.760061720457756,
+      "converged": true
+    },
+    {
+      "k": 4,
+      "bic": -71323.43486188422,
+      "delta_bic": 379433.798816133,
+      "aic": -72981.24533655655,
+      "silhouette_10k": 0.07535718313591071,
+      "calinski_harabasz": 12510.670245007874,
+      "davies_bouldin": 2.2690685312632604,
+      "mean_max_prob": 0.9834216112537536,
+      "uncertain_pct": 3.1104539025331106,
+      "min_cluster_pct": 10.565770862800566,
+      "max_cluster_pct": 38.25768291114826,
+      "converged": true
+    },
+    {
+      "k": 5,
+      "bic": -182945.60031731392,
+      "delta_bic": 267811.6333607033,
+      "aic": -185020.17878841225,
+      "silhouette_10k": 0.0676899955181684,
+      "calinski_harabasz": 11223.393164782576,
+      "davies_bouldin": 2.073455446072931,
+      "mean_max_prob": 0.9729412516152949,
+      "uncertain_pct": 5.044361579015044,
+      "min_cluster_pct": 6.155329818696155,
+      "max_cluster_pct": 34.12241224122412,
+      "converged": true
+    },
+    {
+      "k": 6,
+      "bic": -271767.53422264167,
+      "delta_bic": 178989.69945537555,
+      "aic": -274258.880690166,
+      "silhouette_10k": 0.04287800920330284,
+      "calinski_harabasz": 11974.980230946056,
+      "davies_bouldin": 2.5360297683788415,
+      "mean_max_prob": 0.9705157525416862,
+      "uncertain_pct": 5.522695126655522,
+      "min_cluster_pct": 6.1951909476661955,
+      "max_cluster_pct": 27.920792079207924,
+      "converged": true
+    },
+    {
+      "k": 7,
+      "bic": -320650.6312478671,
+      "delta_bic": 130106.60243015015,
+      "aic": -323558.7457118174,
+      "silhouette_10k": 0.039460673989812914,
+      "calinski_harabasz": 12084.519139816517,
+      "davies_bouldin": 2.189773020129804,
+      "mean_max_prob": 0.9670557293741525,
+      "uncertain_pct": 6.343062877716344,
+      "min_cluster_pct": 6.170759933136171,
+      "max_cluster_pct": 23.99254211135399,
+      "converged": true
+    },
+    {
+      "k": 8,
+      "bic": -413914.2366069341,
+      "delta_bic": 36842.99707108311,
+      "aic": -417239.1190673105,
+      "silhouette_10k": -0.0010646384888128911,
+      "calinski_harabasz": 11061.516562267963,
+      "davies_bouldin": 3.168514488416907,
+      "mean_max_prob": 0.9630915992446355,
+      "uncertain_pct": 7.258583001157258,
+      "min_cluster_pct": 6.155329818696155,
+      "max_cluster_pct": 17.45017358878745,
+      "converged": true
+    },
+    {
+      "k": 9,
+      "bic": -434034.1864050936,
+      "delta_bic": 16723.047272923635,
+      "aic": -437775.8368618959,
+      "silhouette_10k": -0.0041626650048961775,
+      "calinski_harabasz": 10345.76237876085,
+      "davies_bouldin": 3.157399864566093,
+      "mean_max_prob": 0.956940732674854,
+      "uncertain_pct": 8.284685611418285,
+      "min_cluster_pct": 5.831297415455832,
+      "max_cluster_pct": 17.715057220007715,
+      "converged": true
+    },
+    {
+      "k": 10,
+      "bic": -450757.2336780172,
+      "delta_bic": 0.0,
+      "aic": -454915.6521312456,
+      "silhouette_10k": -0.017908092028312762,
+      "calinski_harabasz": 9774.31936532424,
+      "davies_bouldin": 3.370068642247895,
+      "mean_max_prob": 0.9499425383312001,
+      "uncertain_pct": 9.592387810209592,
+      "min_cluster_pct": 5.801723029445801,
+      "max_cluster_pct": 18.239681110968238,
+      "converged": true
+    }
+  ],
+  "hdbscan_metrics": [
+    {
+      "min_cluster_size": 250,
+      "min_samples": 30,
+      "n_clusters": 3,
+      "noise_count": 16089,
+      "noise_pct": 20.68792593545069,
+      "largest_cluster_pct": 77.45274527452746,
+      "smallest_cluster_pct": 0.8113668509708114,
+      "silhouette_non_noise_10k": 0.4927357484354414
+    },
+    {
+      "min_cluster_size": 500,
+      "min_samples": 50,
+      "n_clusters": 3,
+      "noise_count": 15283,
+      "noise_pct": 19.65153658222965,
+      "largest_cluster_pct": 78.55728429985855,
+      "smallest_cluster_pct": 0.7573614504307573,
+      "silhouette_non_noise_10k": 0.4871125033705459
+    },
+    {
+      "min_cluster_size": 1000,
+      "min_samples": 50,
+      "n_clusters": 2,
+      "noise_count": 65897,
+      "noise_pct": 84.73318760447474,
+      "largest_cluster_pct": 12.106210621062106,
+      "smallest_cluster_pct": 3.1606017744631605,
+      "silhouette_non_noise_10k": 0.5712892079570963
+    },
+    {
+      "min_cluster_size": 2000,
+      "min_samples": 100,
+      "n_clusters": 0,
+      "noise_count": 77770,
+      "noise_pct": 100.0,
+      "largest_cluster_pct": 0.0,
+      "smallest_cluster_pct": 0.0,
+      "silhouette_non_noise_10k": NaN
+    }
+  ],
+  "ari_matrix": {
+    "KM_k3": {
+      "KM_k3": 1.0,
+      "KM_k4": 0.439,
+      "KM_k5": 0.4154,
+      "KM_k6": 0.4502,
+      "GMM_k4": 0.1507,
+      "GMM_k5": 0.2344,
+      "GMM_k6": 0.2238,
+      "HDB_500": 0.1057
+    },
+    "KM_k4": {
+      "KM_k3": 0.439,
+      "KM_k4": 1.0,
+      "KM_k5": 0.9409,
+      "KM_k6": 0.5096,
+      "GMM_k4": 0.2436,
+      "GMM_k5": 0.2493,
+      "GMM_k6": 0.2413,
+      "HDB_500": 0.0736
+    },
+    "KM_k5": {
+      "KM_k3": 0.4154,
+      "KM_k4": 0.9409,
+      "KM_k5": 1.0,
+      "KM_k6": 0.5352,
+      "GMM_k4": 0.2403,
+      "GMM_k5": 0.2648,
+      "GMM_k6": 0.257,
+      "HDB_500": 0.089
+    },
+    "KM_k6": {
+      "KM_k3": 0.4502,
+      "KM_k4": 0.5096,
+      "KM_k5": 0.5352,
+      "KM_k6": 1.0,
+      "GMM_k4": 0.1895,
+      "GMM_k5": 0.2509,
+      "GMM_k6": 0.2874,
+      "HDB_500": 0.0768
+    },
+    "GMM_k4": {
+      "KM_k3": 0.1507,
+      "KM_k4": 0.2436,
+      "KM_k5": 0.2403,
+      "KM_k6": 0.1895,
+      "GMM_k4": 1.0,
+      "GMM_k5": 0.5791,
+      "GMM_k6": 0.5229,
+      "HDB_500": 0.132
+    },
+    "GMM_k5": {
+      "KM_k3": 0.2344,
+      "KM_k4": 0.2493,
+      "KM_k5": 0.2648,
+      "KM_k6": 0.2509,
+      "GMM_k4": 0.5791,
+      "GMM_k5": 1.0,
+      "GMM_k6": 0.6001,
+      "HDB_500": 0.1638
+    },
+    "GMM_k6": {
+      "KM_k3": 0.2238,
+      "KM_k4": 0.2413,
+      "KM_k5": 0.257,
+      "KM_k6": 0.2874,
+      "GMM_k4": 0.5229,
+      "GMM_k5": 0.6001,
+      "GMM_k6": 1.0,
+      "HDB_500": 0.1301
+    },
+    "HDB_500": {
+      "KM_k3": 0.1057,
+      "KM_k4": 0.0736,
+      "KM_k5": 0.089,
+      "KM_k6": 0.0768,
+      "GMM_k4": 0.132,
+      "GMM_k5": 0.1638,
+      "GMM_k6": 0.1301,
+      "HDB_500": 1.0
+    }
+  },
+  "ari_vs_hdb500_non_noise": {
+    "KM_k3": 0.055950583507362074,
+    "KM_k4": 0.04067789818642682,
+    "KM_k5": 0.041342890977506895,
+    "KM_k6": 0.030803184069325806,
+    "GMM_k4": 0.04747891837106875,
+    "GMM_k5": 0.038480264231035274,
+    "GMM_k6": 0.028200435087122618
+  },
+  "quick_profiles": {
+    "KM_k4": [
+      {
+        "cluster": 0,
+        "n_desa": 4667,
+        "pct": 6.0,
+        "med_SHM%": 5.4,
+        "med_Kosong%": 1.6,
+        "med_HGU%": 41.8,
+        "med_Pakai%": 0.5,
+        "med_HGB%": 0.0,
+        "med_persil": 117,
+        "Kelurahan%": 13.2
+      },
+      {
+        "cluster": 1,
+        "n_desa": 25770,
+        "pct": 33.14,
+        "med_SHM%": 91.9,
+        "med_Kosong%": 2.2,
+        "med_HGU%": 0.0,
+        "med_Pakai%": 0.9,
+        "med_HGB%": 0.0,
+        "med_persil": 352,
+        "Kelurahan%": 13.7
+      },
+      {
+        "cluster": 2,
+        "n_desa": 28161,
+        "pct": 36.21,
+        "med_SHM%": 57.4,
+        "med_Kosong%": 31.1,
+        "med_HGU%": 0.0,
+        "med_Pakai%": 3.9,
+        "med_HGB%": 0.1,
+        "med_persil": 2072,
+        "Kelurahan%": 28.7
+      },
+      {
+        "cluster": 3,
+        "n_desa": 19172,
+        "pct": 24.65,
+        "med_SHM%": 19.3,
+        "med_Kosong%": 77.2,
+        "med_HGU%": 0.0,
+        "med_Pakai%": 0.3,
+        "med_HGB%": 0.0,
+        "med_persil": 758,
+        "Kelurahan%": 16.6
+      }
+    ],
+    "KM_k5": [
+      {
+        "cluster": 0,
+        "n_desa": 2786,
+        "pct": 3.58,
+        "med_SHM%": 9.6,
+        "med_Kosong%": 0.0,
+        "med_HGU%": 0.0,
+        "med_Pakai%": 70.8,
+        "med_HGB%": 0.0,
+        "med_persil": 9,
+        "Kelurahan%": 14.2
+      },
+      {
+        "cluster": 1,
+        "n_desa": 19360,
+        "pct": 24.89,
+        "med_SHM%": 19.7,
+        "med_Kosong%": 76.9,
+        "med_HGU%": 0.0,
+        "med_Pakai%": 0.3,
+        "med_HGB%": 0.0,
+        "med_persil": 768,
+        "Kelurahan%": 16.8
+      },
+      {
+        "cluster": 2,
+        "n_desa": 27696,
+        "pct": 35.61,
+        "med_SHM%": 58.0,
+        "med_Kosong%": 30.8,
+        "med_HGU%": 0.0,
+        "med_Pakai%": 4.0,
+        "med_HGB%": 0.1,
+        "med_persil": 2088,
+        "Kelurahan%": 28.7
+      },
+      {
+        "cluster": 3,
+        "n_desa": 3068,
+        "pct": 3.94,
+        "med_SHM%": 10.4,
+        "med_Kosong%": 7.3,
+        "med_HGU%": 64.2,
+        "med_Pakai%": 0.1,
+        "med_HGB%": 0.0,
+        "med_persil": 482,
+        "Kelurahan%": 14.4
+      },
+      {
+        "cluster": 4,
+        "n_desa": 24860,
+        "pct": 31.97,
+        "med_SHM%": 92.4,
+        "med_Kosong%": 2.3,
+        "med_HGU%": 0.0,
+        "med_Pakai%": 0.8,
+        "med_HGB%": 0.0,
+        "med_persil": 368,
+        "Kelurahan%": 13.5
+      }
+    ],
+    "KM_k6": [
+      {
+        "cluster": 0,
+        "n_desa": 9575,
+        "pct": 12.31,
+        "med_SHM%": 9.0,
+        "med_Kosong%": 88.5,
+        "med_HGU%": 0.0,
+        "med_Pakai%": 0.1,
+        "med_HGB%": 0.0,
+        "med_persil": 481,
+        "Kelurahan%": 14.3
+      },
+      {
+        "cluster": 1,
+        "n_desa": 18494,
+        "pct": 23.78,
+        "med_SHM%": 70.0,
+        "med_Kosong%": 15.3,
+        "med_HGU%": 0.0,
+        "med_Pakai%": 7.4,
+        "med_HGB%": 0.4,
+        "med_persil": 1924,
+        "Kelurahan%": 30.5
+      },
+      {
+        "cluster": 2,
+        "n_desa": 2679,
+        "pct": 3.44,
+        "med_SHM%": 8.1,
+        "med_Kosong%": 0.0,
+        "med_HGU%": 0.0,
+        "med_Pakai%": 72.7,
+        "med_HGB%": 0.0,
+        "med_persil": 8,
+        "Kelurahan%": 13.8
+      },
+      {
+        "cluster": 3,
+        "n_desa": 22706,
+        "pct": 29.2,
+        "med_SHM%": 41.3,
+        "med_Kosong%": 53.0,
+        "med_HGU%": 0.0,
+        "med_Pakai%": 1.0,
+        "med_HGB%": 0.0,
+        "med_persil": 1578,
+        "Kelurahan%": 21.3
+      },
+      {
+        "cluster": 4,
+        "n_desa": 2911,
+        "pct": 3.74,
+        "med_SHM%": 11.7,
+        "med_Kosong%": 6.1,
+        "med_HGU%": 66.5,
+        "med_Pakai%": 0.1,
+        "med_HGB%": 0.0,
+        "med_persil": 510,
+        "Kelurahan%": 14.6
+      },
+      {
+        "cluster": 5,
+        "n_desa": 21405,
+        "pct": 27.52,
+        "med_SHM%": 93.6,
+        "med_Kosong%": 2.1,
+        "med_HGU%": 0.0,
+        "med_Pakai%": 0.6,
+        "med_HGB%": 0.0,
+        "med_persil": 320,
+        "Kelurahan%": 12.9
+      }
+    ],
+    "GMM_k4": [
+      {
+        "cluster": 0,
+        "n_desa": 8217,
+        "pct": 10.57,
+        "med_SHM%": 16.5,
+        "med_Kosong%": 6.3,
+        "med_HGU%": 5.5,
+        "med_Pakai%": 0.8,
+        "med_HGB%": 0.0,
+        "med_persil": 340,
+        "Kelurahan%": 17.7
+      },
+      {
+        "cluster": 1,
+        "n_desa": 28314,
+        "pct": 36.41,
+        "med_SHM%": 80.6,
+        "med_Kosong%": 12.0,
+        "med_HGU%": 0.0,
+        "med_Pakai%": 0.9,
+        "med_HGB%": 0.0,
+        "med_persil": 537,
+        "Kelurahan%": 10.4
+      },
+      {
+        "cluster": 2,
+        "n_desa": 29753,
+        "pct": 38.26,
+        "med_SHM%": 61.1,
+        "med_Kosong%": 23.8,
+        "med_HGU%": 0.0,
+        "med_Pakai%": 2.9,
+        "med_HGB%": 0.6,
+        "med_persil": 1562,
+        "Kelurahan%": 31.8
+      },
+      {
+        "cluster": 3,
+        "n_desa": 11486,
+        "pct": 14.77,
+        "med_SHM%": 14.0,
+        "med_Kosong%": 85.1,
+        "med_HGU%": 0.0,
+        "med_Pakai%": 0.1,
+        "med_HGB%": 0.0,
+        "med_persil": 655,
+        "Kelurahan%": 13.5
+      }
+    ],
+    "GMM_k5": [
+      {
+        "cluster": 0,
+        "n_desa": 9292,
+        "pct": 11.95,
+        "med_SHM%": 31.5,
+        "med_Kosong%": 8.6,
+        "med_HGU%": 0.0,
+        "med_Pakai%": 7.9,
+        "med_HGB%": 0.3,
+        "med_persil": 184,
+        "Kelurahan%": 26.9
+      },
+      {
+        "cluster": 1,
+        "n_desa": 16582,
+        "pct": 21.32,
+        "med_SHM%": 30.2,
+        "med_Kosong%": 68.4,
+        "med_HGU%": 0.0,
+        "med_Pakai%": 0.3,
+        "med_HGB%": 0.0,
+        "med_persil": 784,
+        "Kelurahan%": 11.6
+      },
+      {
+        "cluster": 2,
+        "n_desa": 26537,
+        "pct": 34.12,
+        "med_SHM%": 59.4,
+        "med_Kosong%": 29.5,
+        "med_HGU%": 0.0,
+        "med_Pakai%": 2.5,
+        "med_HGB%": 0.4,
+        "med_persil": 1783,
+        "Kelurahan%": 30.6
+      },
+      {
+        "cluster": 3,
+        "n_desa": 4787,
+        "pct": 6.16,
+        "med_SHM%": 22.6,
+        "med_Kosong%": 12.9,
+        "med_HGU%": 41.1,
+        "med_Pakai%": 0.2,
+        "med_HGB%": 0.0,
+        "med_persil": 850,
+        "Kelurahan%": 15.0
+      },
+      {
+        "cluster": 4,
+        "n_desa": 20572,
+        "pct": 26.45,
+        "med_SHM%": 90.8,
+        "med_Kosong%": 4.2,
+        "med_HGU%": 0.0,
+        "med_Pakai%": 0.9,
+        "med_HGB%": 0.0,
+        "med_persil": 400,
+        "Kelurahan%": 10.5
+      }
+    ],
+    "HDB_500": [
+      {
+        "cluster": -1,
+        "n_desa": 15283,
+        "pct": 19.65,
+        "med_SHM%": 35.5,
+        "med_Kosong%": 14.3,
+        "med_HGU%": 0.0,
+        "med_Pakai%": 2.6,
+        "med_HGB%": 0.1,
+        "med_persil": 324,
+        "Kelurahan%": 25.9
+      },
+      {
+        "cluster": 0,
+        "n_desa": 589,
+        "pct": 0.76,
+        "med_SHM%": 0.0,
+        "med_Kosong%": 0.0,
+        "med_HGU%": 0.0,
+        "med_Pakai%": 100.0,
+        "med_HGB%": 0.0,
+        "med_persil": 2,
+        "Kelurahan%": 4.8
+      },
+      {
+        "cluster": 1,
+        "n_desa": 61094,
+        "pct": 78.56,
+        "med_SHM%": 64.3,
+        "med_Kosong%": 28.1,
+        "med_HGU%": 0.0,
+        "med_Pakai%": 1.1,
+        "med_HGB%": 0.0,
+        "med_persil": 1000,
+        "Kelurahan%": 18.5
+      },
+      {
+        "cluster": 2,
+        "n_desa": 804,
+        "pct": 1.03,
+        "med_SHM%": 16.8,
+        "med_Kosong%": 1.6,
+        "med_HGU%": 77.3,
+        "med_Pakai%": 0.1,
+        "med_HGB%": 0.0,
+        "med_persil": 608,
+        "Kelurahan%": 12.9
+      }
+    ]
+  }
+}
