@@ -1,0 +1,27 @@
+# OS metadata
+.DS_Store
+Thumbs.db
+Desktop.ini
+
+# Python caches & packaging
+__pycache__/
+*.py[cod]
+*$py.class
+*.egg-info/
+.pytest_cache/
+
+# Virtual environments
+.venv/
+venv/
+env/
+
+# Jupyter checkpoints
+.ipynb_checkpoints/
+
+# Environment variables & Streamlit secrets
+.env
+.streamlit/secrets.toml
+
+# Logs & temporary files
+*.log
+*.tmp
