@@ -11,7 +11,7 @@
 - [x] **Step 2:** Adu "Mak Comblang" — Eksperimen Algoritma Clustering (K-Means, GMM, HDBSCAN) & Pilih $k$
 - [x] **Step 3:** Tes Anti-Goyah — Uji Stabilitas & Sensitivitas (*Seed*, *Bootstrap*, Variant A vs B)
 - [x] **Step 4:** Sesi Kepo — Cek Bias Geografis & Bongkar Profil Tiap Geng
-- [ ] **Step 5:** Kasih Julukan & Bikin Rekomendasi Kebijakan (Termasuk Grup `place_later`)
+- [x] **Step 5:** Kasih Julukan & Bikin Rekomendasi Kebijakan (Termasuk Grup `place_later`)
 
 ---
 
@@ -352,3 +352,51 @@ Di **Step 5 (Final)** kita tinggal:
 1. Memberi **julukan resmi** yang mudah dipahami pembuat kebijakan untuk tiap geng,
 2. Menggabungkan seluruh **79.842 desa** dengan melaporkan kelompok **`place_later.csv`** secara eksplisit (**1.950 desa tanpa persil** sebagai kelompok ke-6 *"Belum Terpetakan"* + **122 baris tereksklusi** sebagai *"Perlu Audit Data"*),
 3. Mengekspor tabel hasil segmentasi akhir & merangkum **rekomendasi prioritas kebijakan ATR/BPN**.
+
+---
+
+## Step 5: Grand Finale — Julukan Resmi, Rekonsiliasi 79.842 Desa & Rekomendasi Kebijakan
+
+> Notebook: `modeling/clustering.ipynb` (Sel 5.1–5.2) | Ringkasan angka: `modeling/outputs/step5_summary.json` | Output final: `modeling/outputs/desa_tipologi_final.csv` & `modeling/outputs/kabupaten_prioritas.csv`
+
+### 1. Peta Lengkap 79.842 Desa Indonesia (5 Segmen Model + 2 Grup `place_later`)
+Semua **79.842 desa/kelurahan** se-Indonesia akhirnya resmi terekonciliasi 100% — `77.770` desa dari model `K-Means (k = 5)` digabung dengan `1.950` desa tanpa persil dan `122` baris anomali secara jujur (tanpa memaksa mereka masuk klaster):
+
+| Kode & Julukan Resmi | Jumlah Desa (`%` Nasional) | Status Pemodelan | Arahan Kebijakan ATR/BPN |
+| :--- | :---: | :--- | :--- |
+| **`S1`: Padat Urban–Jawa/Bali (Penuntasan Sisa)** | **27.696** (`34,69%`) | Fitted (`K-Means k=5`, `C2`) | Deklarasi Desa/Kota Lengkap, perapian batas *overshoot*, sinkronisasi RDTR/OSS |
+| **`S2`: Dominan SHM Parsial (Cakupan Peta Rendah)** | **24.860** (`31,14%`) | Fitted (`K-Means k=5`, `C4`) | Ekspansi pemetaan bidang baru di wilayah non-persil / luar kawasan hutan |
+| **`S3`: Dominan Belum Bersertifikat (Prioritas #1 PTSL)** | **19.360** (`24,25%`) | Fitted (`K-Means k=5`, `C1`) | Percepatan penerbitan sertifikat PTSL pada bidang yang sudah terpetakan |
+| **`S4`: Kantong Perkebunan Skala Besar (HGU)** | **3.068** (`3,84%`) | Fitted (`K-Means k=5`, `C3`) | Penertiban batas konsesi HGU lintas desa & sinkronisasi Kebijakan Satu Peta |
+| **`S5`: Kantong Aset Pemerintah / Hak Pakai (Pemetaan Awal)** | **2.786** (`3,49%`) | Fitted (`K-Means k=5`, `C0`) | Pemetaan kadastral awal bidang masyarakat (melengkapi aset publik) |
+| **`G6`: Belum Terpetakan (Nol Persil)** | **1.950** (`2,44%`) | `place_later` (0 persil) | Survei & pemetaan kadastral dasar + verifikasi cakupan sistem GIS BPN |
+| **`G7`: Anomali Data (Perlu Audit Spasial)** | **122** (`0,15%`) | `excluded_rows` (Step 3) | Audit lapangan & perbaikan geometri/master wilayah (luas=0, rasio>10×, placeholder) |
+
+---
+
+### 2. Hotspot Kabupaten/Kota: Siapa Harus Ditangani Duluan?
+Semua desa sudah diagregasi per **506 `kab_key`** ke `modeling/outputs/kabupaten_prioritas.csv`. Ini tiga daftar *hotspot* teratas:
+
+1. **Prioritas #1 Sertifikasi PTSL (`S3` terbanyak — bidang sudah digambar, tinggal diterbitkan SHM):**
+   - **Aceh Timur** (`242` desa / `49,7%`), **Aceh Besar** (`222` / `36,7%`), **Kuantan Singingi, Riau** (`188` desa — **`78,0%`** satu kabupaten!), **Aceh Utara** (`177`), **Tapanuli Selatan** (`170`), **Pidie** (`170`), **Malang, Jatim** (`163` / `41,7%`), **Bireuen** (`158`), **Kerinci, Jambi** (`150` / `53,2%`), dan **Minahasa, Sulut** (`142` / `45,1%`).
+2. **Prioritas Survei & Pemetaan Dasar (`G6` nol persil terbanyak):**
+   - **Manokwari, Papua Barat** (`243` desa / **`54,0%`** desanya nol persil!), **Ende, NTT** (`68` / `24,5%`), **Tapanuli Selatan** (`55`), **Manggarai Barat, NTT** (`52` / `27,5%`), **Mandailing Natal** (`50`), **Fakfak** (`46` / `30,5%`), **Kepulauan Yapen** (`44` / `31,4%`), hingga **Sarmi, Papua** (`38` / `40,0%`).
+3. **Prioritas Audit Data & Perbaikan Peta (`G7` anomali + *overshoot*):**
+   - **Bengkulu** (`22` baris tereksklusi luas=0 + `48` overshoot = `70` dari `100` desa), **Bandar Lampung** (`6` + `27`), **Sigi** (`5` + `18`), **Bintan** (`5` + `2`), serta **Blora, Jateng** (`3` anomali + `103` *overshoot*).
+
+---
+
+### 3. Amunisi Presentasi: 4 Batasan Jujur (*Honest Limitations*)
+Kalau nanti presentasi atau ditanya dosen/penguji, sampaikan 4 hal ini di depan — justru bikin analisis terlihat matang dan jujur secara ilmiah:
+1. **Kontinum vs Pulau Diskrit:** Data SHM ↔ Kosong membentuk **gradasi kontinu** (terlihat di PCA & HDBSCAN), sehingga `S1`–`S2`–`S3` adalah **segmentasi kebijakan yang stabil** di sepanjang spektrum, sementara `S4 (HGU)` dan `S5 (Hak Pakai)` memang kantong kepadatan nyata.
+2. **Sensitivitas Pilihan Desain:** `K-Means (k = 5)` sangat kokoh secara internal (`Multi-Seed ARI 0,989`, `Bootstrap ARI 0,985`), namun zona tengah `S1` bergeser bila luas & usia sertifikat ikut dimasukkan (**Variant B**, `ARI = 0,645`), dan hasilnya akan berbeda bila memakai proporsi *cacah bidang* bukan *luas bidang* (`rho = 0,621`).
+3. **Banjir Nol Bersifat Ambigu:** Data banjir (`21,8%` bernilai nol secara regional) sengaja tidak dijadikan input model dan tidak boleh diklaim sebagai bukti bebas banjir sebelum divalidasi dengan data elevasi atau pemilik data.
+4. **Keterbatasan Kunci Kabupaten & Asumsi Kolom:** `kab_key` masih membagi Kab. Bogor ke dua kode lama, dan arti kolom (`kosong`, satuan $m^2$, `rdtr_luas`, `banjir_*`, `tahun_*`) tetap dicatat sebagai asumsi menunggu konfirmasi pemilik data.
+
+---
+
+### 4. Daftar Deliverable Final Proyek
+- **Notebook lengkap (Step 1–5, semua grafik *inline*):** `modeling/clustering.ipynb`
+- **Tabel tipologi 79.842 desa (plus jarak centroid & skor stabilitas bootstrap):** `modeling/outputs/desa_tipologi_final.csv`
+- **Tabel prioritas 506 Kabupaten/Kota:** `modeling/outputs/kabupaten_prioritas.csv`
+- **Jurnal belajar lengkap (Step 0–5):** `docs/CATATAN_BELAJAR.md`

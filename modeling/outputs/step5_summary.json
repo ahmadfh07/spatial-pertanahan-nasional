@@ -1,0 +1,322 @@
+{
+  "national_reconciliation": [
+    {
+      "segment_code": "S1_PADAT_TRANSISI",
+      "segment_label": "S1: Padat Urban-Jawa/Bali (Penuntasan Sisa)",
+      "n_desa": 27696,
+      "pct_nasional": 34.69,
+      "fit_status": "Fitted (K-Means k=5)",
+      "arahan_kebijakan": "Deklarasi Desa/Kota Lengkap, perapian batas overshoot, sinkronisasi RDTR/OSS"
+    },
+    {
+      "segment_code": "S2_SHM_PARSIAL",
+      "segment_label": "S2: Dominan SHM Parsial (Cakupan Peta Rendah)",
+      "n_desa": 24860,
+      "pct_nasional": 31.14,
+      "fit_status": "Fitted (K-Means k=5)",
+      "arahan_kebijakan": "Ekspansi pemetaan bidang baru di wilayah non-persil / luar kawasan hutan"
+    },
+    {
+      "segment_code": "S3_PRIORITAS_PTSL",
+      "segment_label": "S3: Dominan Belum Bersertifikat (Prioritas #1 PTSL)",
+      "n_desa": 19360,
+      "pct_nasional": 24.25,
+      "fit_status": "Fitted (K-Means k=5)",
+      "arahan_kebijakan": "Percepatan penerbitan sertifikat PTSL pada bidang yang sudah terpetakan"
+    },
+    {
+      "segment_code": "S4_PERKEBUNAN_HGU",
+      "segment_label": "S4: Kantong Perkebunan Skala Besar (HGU)",
+      "n_desa": 3068,
+      "pct_nasional": 3.84,
+      "fit_status": "Fitted (K-Means k=5)",
+      "arahan_kebijakan": "Penertiban batas konsesi HGU lintas desa & sinkronisasi Kebijakan Satu Peta"
+    },
+    {
+      "segment_code": "S5_HAK_PAKAI_AWAL",
+      "segment_label": "S5: Kantong Aset Pemerintah / Hak Pakai (Pemetaan Awal)",
+      "n_desa": 2786,
+      "pct_nasional": 3.49,
+      "fit_status": "Fitted (K-Means k=5)",
+      "arahan_kebijakan": "Pemetaan kadastral awal bidang masyarakat (melengkapi aset publik)"
+    },
+    {
+      "segment_code": "G6_BELUM_TERPETAKAN",
+      "segment_label": "G6: Belum Terpetakan (Nol Persil)",
+      "n_desa": 1950,
+      "pct_nasional": 2.44,
+      "fit_status": "place_later (Tidak di-fit: 0 persil)",
+      "arahan_kebijakan": "Survei & pemetaan kadastral dasar + verifikasi cakupan sistem GIS BPN"
+    },
+    {
+      "segment_code": "G7_ANOMALI_AUDIT",
+      "segment_label": "G7: Anomali Data (Perlu Audit Spasial)",
+      "n_desa": 122,
+      "pct_nasional": 0.15,
+      "fit_status": "excluded_rows (Tidak di-fit: anomali Step 3)",
+      "arahan_kebijakan": "Audit lapangan & perbaikan geometri/master wilayah (luas=0, rasio>10x, placeholder)"
+    }
+  ],
+  "total_villages": 79842,
+  "total_kab_keys": 506,
+  "top10_ptsl_s3": [
+    {
+      "kab_key": "ACEH | ACEH TIMUR | 0108",
+      "kabupaten": "Aceh Timur",
+      "provinsi": "Aceh",
+      "total_desa": 487,
+      "S3_PRIORITAS_PTSL": 242,
+      "S3_PRIORITAS_PTSL_pct": 49.69
+    },
+    {
+      "kab_key": "ACEH | ACEH BESAR | 0103",
+      "kabupaten": "Aceh Besar",
+      "provinsi": "Aceh",
+      "total_desa": 605,
+      "S3_PRIORITAS_PTSL": 222,
+      "S3_PRIORITAS_PTSL_pct": 36.69
+    },
+    {
+      "kab_key": "RIAU | KUANTAN SINGINGI | 0514",
+      "kabupaten": "Kuantan Singingi",
+      "provinsi": "Riau",
+      "total_desa": 241,
+      "S3_PRIORITAS_PTSL": 188,
+      "S3_PRIORITAS_PTSL_pct": 78.01
+    },
+    {
+      "kab_key": "ACEH | ACEH UTARA | 0107",
+      "kabupaten": "Aceh Utara",
+      "provinsi": "Aceh",
+      "total_desa": 767,
+      "S3_PRIORITAS_PTSL": 177,
+      "S3_PRIORITAS_PTSL_pct": 23.08
+    },
+    {
+      "kab_key": "SUMATERA UTARA | TAPANULI SELATAN | 0210",
+      "kabupaten": "Tapanuli Selatan",
+      "provinsi": "Sumatera Utara",
+      "total_desa": 702,
+      "S3_PRIORITAS_PTSL": 170,
+      "S3_PRIORITAS_PTSL_pct": 24.22
+    },
+    {
+      "kab_key": "ACEH | PIDIE | 0106",
+      "kabupaten": "Pidie",
+      "provinsi": "Aceh",
+      "total_desa": 708,
+      "S3_PRIORITAS_PTSL": 170,
+      "S3_PRIORITAS_PTSL_pct": 24.01
+    },
+    {
+      "kab_key": "JAWA TIMUR | MALANG | 1230",
+      "kabupaten": "Malang",
+      "provinsi": "Jawa Timur",
+      "total_desa": 391,
+      "S3_PRIORITAS_PTSL": 163,
+      "S3_PRIORITAS_PTSL_pct": 41.69
+    },
+    {
+      "kab_key": "ACEH | BIREUEN | 0111",
+      "kabupaten": "Bireuen",
+      "provinsi": "Aceh",
+      "total_desa": 571,
+      "S3_PRIORITAS_PTSL": 158,
+      "S3_PRIORITAS_PTSL_pct": 27.67
+    },
+    {
+      "kab_key": "JAMBI | KERINCI | 0605",
+      "kabupaten": "Kerinci",
+      "provinsi": "Jambi",
+      "total_desa": 282,
+      "S3_PRIORITAS_PTSL": 150,
+      "S3_PRIORITAS_PTSL_pct": 53.19
+    },
+    {
+      "kab_key": "SULAWESI UTARA | MINAHASA | 1803",
+      "kabupaten": "MINAHASA",
+      "provinsi": "Sulawesi Utara",
+      "total_desa": 315,
+      "S3_PRIORITAS_PTSL": 142,
+      "S3_PRIORITAS_PTSL_pct": 45.08
+    }
+  ],
+  "top10_unmapped_g6": [
+    {
+      "kab_key": "PAPUA BARAT | MANOKWARI | 3301",
+      "kabupaten": "Manokwari",
+      "provinsi": "Papua Barat",
+      "total_desa": 450,
+      "G6_BELUM_TERPETAKAN": 243,
+      "G6_BELUM_TERPETAKAN_pct": 54.0
+    },
+    {
+      "kab_key": "NUSA TENGGARA TIMUR | ENDE | 2408",
+      "kabupaten": "Ende",
+      "provinsi": "Nusa Tenggara Timur",
+      "total_desa": 278,
+      "G6_BELUM_TERPETAKAN": 68,
+      "G6_BELUM_TERPETAKAN_pct": 24.46
+    },
+    {
+      "kab_key": "SUMATERA UTARA | TAPANULI SELATAN | 0210",
+      "kabupaten": "Tapanuli Selatan",
+      "provinsi": "Sumatera Utara",
+      "total_desa": 702,
+      "G6_BELUM_TERPETAKAN": 55,
+      "G6_BELUM_TERPETAKAN_pct": 7.83
+    },
+    {
+      "kab_key": "NUSA TENGGARA TIMUR | MANGGARAI BARAT | 2416",
+      "kabupaten": "Manggarai Barat",
+      "provinsi": "Nusa Tenggara Timur",
+      "total_desa": 189,
+      "G6_BELUM_TERPETAKAN": 52,
+      "G6_BELUM_TERPETAKAN_pct": 27.51
+    },
+    {
+      "kab_key": "SUMATERA UTARA | MANDAILING NATAL | 0218",
+      "kabupaten": "Mandailing Natal",
+      "provinsi": "Sumatera Utara",
+      "total_desa": 408,
+      "G6_BELUM_TERPETAKAN": 50,
+      "G6_BELUM_TERPETAKAN_pct": 12.25
+    },
+    {
+      "kab_key": "PAPUA BARAT | FAKFAK | 3304",
+      "kabupaten": "Fakfak",
+      "provinsi": "Papua Barat",
+      "total_desa": 151,
+      "G6_BELUM_TERPETAKAN": 46,
+      "G6_BELUM_TERPETAKAN_pct": 30.46
+    },
+    {
+      "kab_key": "PAPUA | KEPULAUAN YAPEN | 2607",
+      "kabupaten": "Kepulauan Yapen",
+      "provinsi": "Papua",
+      "total_desa": 140,
+      "G6_BELUM_TERPETAKAN": 44,
+      "G6_BELUM_TERPETAKAN_pct": 31.43
+    },
+    {
+      "kab_key": "NUSA TENGGARA TIMUR | TIMOR TENGAH SELATAN | 2402",
+      "kabupaten": "Timor Tengah Selatan",
+      "provinsi": "Nusa Tenggara Timur",
+      "total_desa": 271,
+      "G6_BELUM_TERPETAKAN": 43,
+      "G6_BELUM_TERPETAKAN_pct": 15.87
+    },
+    {
+      "kab_key": "KALIMANTAN TENGAH | MURUNG RAYA | 1508",
+      "kabupaten": "Murung Raya",
+      "provinsi": "Kalimantan Tengah",
+      "total_desa": 125,
+      "G6_BELUM_TERPETAKAN": 41,
+      "G6_BELUM_TERPETAKAN_pct": 32.8
+    },
+    {
+      "kab_key": "PAPUA | SARMI | 2616",
+      "kabupaten": "Sarmi",
+      "provinsi": "Papua",
+      "total_desa": 95,
+      "G6_BELUM_TERPETAKAN": 38,
+      "G6_BELUM_TERPETAKAN_pct": 40.0
+    }
+  ],
+  "top10_audit_g7": [
+    {
+      "kab_key": "BENGKULU | BENGKULU | 0704",
+      "kabupaten": "Bengkulu",
+      "provinsi": "Bengkulu",
+      "total_desa": 100,
+      "G7_ANOMALI_AUDIT": 22,
+      "n_overshoot": 48,
+      "n_audit_total": 70
+    },
+    {
+      "kab_key": "LAMPUNG | BANDAR LAMPUNG | 0801",
+      "kabupaten": "Bandar Lampung",
+      "provinsi": "Lampung",
+      "total_desa": 129,
+      "G7_ANOMALI_AUDIT": 6,
+      "n_overshoot": 27,
+      "n_audit_total": 33
+    },
+    {
+      "kab_key": "SULAWESI TENGAH | SIGI | 1911",
+      "kabupaten": "Sigi",
+      "provinsi": "Sulawesi Tengah",
+      "total_desa": 183,
+      "G7_ANOMALI_AUDIT": 5,
+      "n_overshoot": 18,
+      "n_audit_total": 23
+    },
+    {
+      "kab_key": "KEPULAUAN RIAU | BINTAN | 3201",
+      "kabupaten": "Bintan",
+      "provinsi": "Kepulauan Riau",
+      "total_desa": 52,
+      "G7_ANOMALI_AUDIT": 5,
+      "n_overshoot": 2,
+      "n_audit_total": 7
+    },
+    {
+      "kab_key": "SUMATERA UTARA | PEMATANG SIANTAR | 0203",
+      "kabupaten": "PEMATANG SIANTAR",
+      "provinsi": "Sumatera Utara",
+      "total_desa": 62,
+      "G7_ANOMALI_AUDIT": 4,
+      "n_overshoot": 34,
+      "n_audit_total": 38
+    },
+    {
+      "kab_key": "JAWA BARAT | BANDUNG | 1015",
+      "kabupaten": "Bandung",
+      "provinsi": "Jawa Barat",
+      "total_desa": 193,
+      "G7_ANOMALI_AUDIT": 4,
+      "n_overshoot": 29,
+      "n_audit_total": 33
+    },
+    {
+      "kab_key": "JAWA TENGAH | BLORA | 1112",
+      "kabupaten": "Blora",
+      "provinsi": "Jawa Tengah",
+      "total_desa": 295,
+      "G7_ANOMALI_AUDIT": 3,
+      "n_overshoot": 103,
+      "n_audit_total": 106
+    },
+    {
+      "kab_key": "SUMATERA UTARA | SIMALUNGUN | 0209",
+      "kabupaten": "Simalungun",
+      "provinsi": "Sumatera Utara",
+      "total_desa": 417,
+      "G7_ANOMALI_AUDIT": 3,
+      "n_overshoot": 37,
+      "n_audit_total": 40
+    },
+    {
+      "kab_key": "SULAWESI TENGAH | PALU | 1905",
+      "kabupaten": "Palu",
+      "provinsi": "Sulawesi Tengah",
+      "total_desa": 52,
+      "G7_ANOMALI_AUDIT": 3,
+      "n_overshoot": 28,
+      "n_audit_total": 31
+    },
+    {
+      "kab_key": "MALUKU | KEPULAUAN ARU | 2510",
+      "kabupaten": "Kepulauan Aru",
+      "provinsi": "Maluku",
+      "total_desa": 120,
+      "G7_ANOMALI_AUDIT": 2,
+      "n_overshoot": 41,
+      "n_audit_total": 43
+    }
+  ],
+  "exports": {
+    "desa_tipologi_final_csv": "modeling/outputs/desa_tipologi_final.csv",
+    "kabupaten_prioritas_csv": "modeling/outputs/kabupaten_prioritas.csv"
+  }
+}
