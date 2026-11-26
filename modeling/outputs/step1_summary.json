@@ -1,0 +1,290 @@
+{
+  "sanity": {
+    "n_rows": 77770,
+    "n_cols": 8,
+    "leading_zero_kode8_count": 24852,
+    "max_recipe_rebuild_diff": 1.354374909401379e-05,
+    "comp_variance": 4.999999871386173,
+    "other_variance": 2.1336016446048798,
+    "total_variance": 7.133601515991053,
+    "comp_variance_pct": 70.09082102746996,
+    "other_variance_pct": 29.909178972530032
+  },
+  "context_breakdown": {
+    "dominant_right_counts": {
+      "Hak Milik (SHM)": 47458,
+      "Kosong (Belum Hak)": 24405,
+      "Hak Pakai": 2417,
+      "HGU": 2281,
+      "HGB": 969,
+      "Lainnya (<1%)": 240
+    },
+    "dominant_right_pct": {
+      "Hak Milik (SHM)": 61.02,
+      "Kosong (Belum Hak)": 31.38,
+      "Hak Pakai": 3.11,
+      "HGU": 2.93,
+      "HGB": 1.25,
+      "Lainnya (<1%)": 0.31
+    },
+    "tipe_counts": {
+      "Desa": 62361,
+      "Kelurahan": 15409
+    }
+  },
+  "examples": [
+    {
+      "profile": "Kelurahan Urban (SHM + HGB tinggi)",
+      "kode8": "06010903",
+      "nama": "Mayang Mangurai",
+      "kecamatan": "ALAM BARAJO",
+      "kabupaten": "Kota Jambi",
+      "provinsi": "Jambi",
+      "tipe": "Kelurahan",
+      "jumlah_persil": 13927,
+      "luas_desa_ha": 693.236,
+      "raw_shares": {
+        "hak_milik": 0.777696,
+        "hgb": 0.151802,
+        "hgu": 0.0,
+        "hak_pakai": 0.0359404,
+        "kosong": 0.0317206,
+        "other": 0.00284171
+      },
+      "scaled_values": {
+        "s_hak_milik": 0.831892,
+        "s_hgb": 1.44546,
+        "s_hgu": -0.165198,
+        "s_hak_pakai": 0.0937992,
+        "s_kosong": -1.33552,
+        "s_other": 0.110004,
+        "log_parcel_density": 1.11687,
+        "log_mean_parcel": -1.23426
+      }
+    },
+    {
+      "profile": "Desa Dominan Kosong (Belum Bersertifikat)",
+      "kode8": "12301108",
+      "nama": "Arjowilangun",
+      "kecamatan": "Kalipare",
+      "kabupaten": "Malang",
+      "provinsi": "Jawa Timur",
+      "tipe": "Desa",
+      "jumlah_persil": 11812,
+      "luas_desa_ha": 1344.03,
+      "raw_shares": {
+        "hak_milik": 0.0117801,
+        "hgb": 0.00321856,
+        "hgu": 0.0,
+        "hak_pakai": 0.000621486,
+        "kosong": 0.983924,
+        "other": 0.00045595
+      },
+      "scaled_values": {
+        "s_hak_milik": -2.60163,
+        "s_hgb": -0.0325194,
+        "s_hgu": -0.165198,
+        "s_hak_pakai": -0.637229,
+        "s_kosong": 2.27779,
+        "s_other": -0.0318714,
+        "log_parcel_density": 0.756406,
+        "log_mean_parcel": -0.432867
+      }
+    },
+    {
+      "profile": "Desa Perkebunan (Dominan HGU)",
+      "kode8": "16090306",
+      "nama": "Mulupan",
+      "kecamatan": "MUARA BENGKAL",
+      "kabupaten": "Kutai Timur",
+      "provinsi": "Kalimantan Timur",
+      "tipe": "Desa",
+      "jumlah_persil": 32,
+      "luas_desa_ha": 9401.48,
+      "raw_shares": {
+        "hak_milik": 2.96736e-05,
+        "hgb": 0.0,
+        "hgu": 0.999808,
+        "hak_pakai": 0.00014431,
+        "kosong": 1.82911e-05,
+        "other": 0.0
+      },
+      "scaled_values": {
+        "s_hak_milik": -3.05934,
+        "s_hgb": -0.284405,
+        "s_hgu": 4.27427,
+        "s_hak_pakai": -0.694578,
+        "s_kosong": -2.10729,
+        "s_other": -0.126676,
+        "log_parcel_density": -2.66885,
+        "log_mean_parcel": 4.97542
+      }
+    },
+    {
+      "profile": "Wilayah Dominan Hak Pakai (Pemerintah/Fasum)",
+      "kode8": "05050101",
+      "nama": "Bangkinang",
+      "kecamatan": "BANGKINANG KOTA",
+      "kabupaten": "KAMPAR",
+      "provinsi": "Riau",
+      "tipe": "Kelurahan",
+      "jumlah_persil": 5172,
+      "luas_desa_ha": 546.933,
+      "raw_shares": {
+        "hak_milik": 0.0485265,
+        "hgb": 0.00272841,
+        "hgu": 0.0,
+        "hak_pakai": 0.837933,
+        "kosong": 0.110686,
+        "other": 0.000125707
+      },
+      "scaled_values": {
+        "s_hak_milik": -2.10547,
+        "s_hgb": -0.0524905,
+        "s_hgu": -0.165198,
+        "s_hak_pakai": 3.31631,
+        "s_kosong": -0.64914,
+        "s_other": -0.0768966,
+        "log_parcel_density": 0.78834,
+        "log_mean_parcel": 0.766808
+      }
+    },
+    {
+      "profile": "Desa Campuran / Transisi (SHM ~50% + Kosong ~45%)",
+      "kode8": "11260808",
+      "nama": "Tanjungrejo",
+      "kecamatan": "Bayan",
+      "kabupaten": "Purworejo",
+      "provinsi": "Jawa Tengah",
+      "tipe": "Desa",
+      "jumlah_persil": 2051,
+      "luas_desa_ha": 153.136,
+      "raw_shares": {
+        "hak_milik": 0.464866,
+        "hgb": 0.0,
+        "hgu": 0.0,
+        "hak_pakai": 0.12402,
+        "kosong": 0.403724,
+        "other": 0.00739003
+      },
+      "scaled_values": {
+        "s_hak_milik": -0.0563514,
+        "s_hgb": -0.284405,
+        "s_hgu": -0.165198,
+        "s_hak_pakai": 0.815661,
+        "s_kosong": 0.694803,
+        "s_other": 0.255001,
+        "log_parcel_density": 0.940092,
+        "log_mean_parcel": -0.756916
+      }
+    }
+  ],
+  "pca": {
+    "explained_variance_ratio": [
+      0.3966199759526927,
+      0.27982180721600036,
+      0.135124473565428,
+      0.07481471947663763,
+      0.04910956563546813,
+      0.03575038642328537,
+      0.01753675848698577,
+      0.011222313243502025
+    ],
+    "cumulative_variance_ratio": [
+      0.3966199759526927,
+      0.6764417831686931,
+      0.8115662567341211,
+      0.8863809762107587,
+      0.9354905418462268,
+      0.9712409282695121,
+      0.9887776867564979,
+      0.9999999999999999
+    ]
+  },
+  "tendency": {
+    "n_seeds": 10,
+    "sample_m": 500,
+    "hopkins_8d_box": {
+      "mean": 0.9525025333220934,
+      "std": 0.001682985405148034,
+      "median": 0.9521105860991703,
+      "min": 0.95034636602522,
+      "max": 0.9549968973661678,
+      "p10": 0.9506212331708895,
+      "p90": 0.9548490391229506,
+      "values": [
+        0.9548326104292598,
+        0.9506517739648528,
+        0.9515670343511667,
+        0.9512810466649853,
+        0.9535165593711734,
+        0.9549968973661678,
+        0.9526541378471738,
+        0.9515094191247861,
+        0.953669488076148,
+        0.95034636602522
+      ]
+    },
+    "hopkins_pca4_p01_p99": {
+      "mean": 0.8862683105720637,
+      "std": 0.0024187895804390247,
+      "median": 0.8862421316971077,
+      "min": 0.8833040676663682,
+      "max": 0.8906862062689991,
+      "p10": 0.8835203595557178,
+      "p90": 0.8898555233767979,
+      "values": [
+        0.885281967773894,
+        0.8844144784596802,
+        0.8835443919878678,
+        0.8897632252776644,
+        0.8860813464409052,
+        0.8864029169533103,
+        0.8864787347684414,
+        0.8867257701235071,
+        0.8906862062689991,
+        0.8833040676663682
+      ]
+    },
+    "hopkins_simplex_null": {
+      "mean": 0.9045638368314034,
+      "std": 0.002888701305333347,
+      "median": 0.9047075219809271,
+      "min": 0.9005211691826197,
+      "max": 0.9084971278675709,
+      "p10": 0.9006848068370528,
+      "p90": 0.907885538614089,
+      "values": [
+        0.9084971278675709,
+        0.9023976529466066,
+        0.9007029887986564,
+        0.9033399867983477,
+        0.9068982513163582,
+        0.9078175842525911,
+        0.9060793615511082,
+        0.9033091884366675,
+        0.9060750571635064,
+        0.9005211691826197
+      ]
+    },
+    "pairwise_dist_3k": {
+      "mean": 3.4041978517537976,
+      "std": 1.6734085709699769,
+      "median": 3.160419359111909,
+      "min": 0.009271446273370626,
+      "max": 14.420054255965788,
+      "p10": 1.4628808579399477,
+      "p90": 5.690699719177547
+    },
+    "knn10_dist_10k": {
+      "mean": 0.3479625724231294,
+      "std": 0.23507543630197006,
+      "median": 0.278245993104262,
+      "min": 0.052939957357368644,
+      "max": 3.4495998529649783,
+      "p10": 0.15582249916872254,
+      "p90": 0.6223175200818779
+    }
+  },
+  "place_later_rows": 2744
+}
