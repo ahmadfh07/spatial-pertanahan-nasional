@@ -9,7 +9,7 @@
 - [x] **Step 0:** Kenalan dari Nol — Spill The Tea Proyek & Drama Datanya
 - [x] **Step 1:** Cek Ombak — Kenalan sama `X_A_scaled.csv` & Uji *Cluster Tendency*
 - [x] **Step 2:** Adu "Mak Comblang" — Eksperimen Algoritma Clustering (K-Means, GMM, HDBSCAN) & Pilih $k$
-- [ ] **Step 3:** Tes Anti-Goyah — Uji Stabilitas & Sensitivitas (*Seed*, *Bootstrap*, Variant A vs B)
+- [x] **Step 3:** Tes Anti-Goyah — Uji Stabilitas & Sensitivitas (*Seed*, *Bootstrap*, Variant A vs B)
 - [ ] **Step 4:** Sesi Kepo — Cek Bias Geografis & Bongkar Profil Tiap Geng
 - [ ] **Step 5:** Kasih Julukan & Bikin Rekomendasi Kebijakan (Termasuk Grup `place_later`)
 
@@ -242,3 +242,58 @@ Supaya nggak fanatik sama satu metode, kita suruh 3 algoritma dengan karakter be
   2. Diambil sampel acak berulang (*bootstrap*)?
   3. Dibandingkan dengan **Variant B ([X_B_scaled.csv](file:///Users/otnansirk/S2-MMI/DATA-SCIENCE/spatial-pertanahan-nasional/data/clustering_ready/X_B_scaled.csv))** yang ikut memasukkan luas desa + usia pendaftaran?
   4. Bobot blok komposisinya diubah (misal disamakan 50%:50% dengan kepadatan/ukuran)?
+
+---
+
+## Step 3: Tes Anti-Goyah — Uji Stabilitas & Sensitivitas
+
+> Notebook: `modeling/clustering.ipynb` (Sel 3.1–3.3) | Ringkasan angka: `modeling/outputs/step3_summary.json` | Semua grafik tampil *inline* di dalam notebook
+
+### 1. Empat tes ketahanan yang dijalani `K-Means (k = 5)`
+Sebelum nekat memberi julukan ke 5 geng hasil Step 2, kita uji dulu seberapa anti-goyah mereka lewat **4 tes**:
+1. **Multi-Seed (10× acak awal):** Kalau komputer start dari posisi awal beda, hasil gengnya berubah nggak?
+2. **Bootstrap (20× kocok ulang 77.770 desa):** Kalau isi sampel desa diguncang berulang-ulang, tiap geng tetap utuh atau bubar?
+3. **Variant A vs Variant B (`X_B_scaled.csv`):** Kalau luas desa + usia sertifikat ikut masuk hitungan (di 77.098 desa irisan), siapa yang bertahan dan siapa yang pindah geng?
+4. **Sensitivitas Bobot Blok Komposisi (Decision D11):** Kalau jatah bobot 6 hak tanah diubah dari default `70,1%` menjadi `50/50`, `Z-score per kolom` (`75,0%`), atau `Comp=1` (`31,9%`), seberapa jauh hasilnya bergeser?
+
+*(Ukuran kemiripan dua versi klaster pakai **ARI / Adjusted Rand Index** & **Jaccard**: `1,00` = kembar identik, `> 0,85` = super stabil, `0,60–0,75` = mirip secara garis besar tapi perbatasan bergeser, `< 0,55` = berubah cukup drastis.)*
+
+---
+
+### 2. Hasil Tes Internal: `k = 5` Ternyata Paling Anti-Goyah!
+Kejutan manis di Sel 3.1:
+- **Multi-Seed (10 seed, 45 pasang):** ARI rata-rata **`0,9890`** (minimum `0,9722`). Mau diulang dari mana saja, hasilnya nyaris identik!
+- **Bootstrap (20 resamples):**
+  - **`k = 5`: ARI rata-rata `0,9847`** (min `0,9735`, NMI `0,9747`) — **malah lebih stabil daripada `k = 4` (`0,9771`) maupun `k = 6` (`0,9650`)!**
+  - **Ketahanan tiap geng (`k = 5`, Jaccard di 20 bootstrap):** Kelimanya tembus **`> 0,987`**!
+    - `C4: Matang SHM` = **`0,9928`**
+    - `C3: Perkebunan HGU` = **`0,9897`**
+    - `C1: Dominan Kosong` = **`0,9877`**
+    - `C0: Hak Pakai (Pem/Fasum)` = **`0,9872`**
+    - `C2: Transisi / Padat` = **`0,9870`**
+  - **Konsistensi per-desa:** **`97,81%` desa** selalu masuk geng yang persis sama **20 dari 20 kali** (`100%`), dan hanya **`921` desa (`1,18%`)** yang duduk di garis perbatasan (`< 80%`).
+
+> **Kesimpulan internal:** Di dalam data Variant A, batas 5 geng K-Means ini **batu karang banget** — bukan hasil kebetulan *random seed* atau sampel!
+
+---
+
+### 3. Hasil Tes Sensitivitas: Drama Variant A vs B & Bobot D11
+Nah, pas aturannya diganti (fitur ditambah atau bobot digeser), ini yang terbongkar di Sel 3.2–3.3:
+
+1. **Variant A vs Variant B (`X_B_scaled.csv`, `77.098` desa irisan): `ARI = 0,6450` (NMI `0,6689`)**
+   - Kenapa turun ke `0,645`? Lihat *heatmap* perpindahan anggotanya:
+     - **4 geng dengan identitas kuat nyaris tidak goyah:** **`C3: Perkebunan HGU` bertahan `98,4%`**, **`C1: Dominan Kosong` `94,3%`**, **`C0: Hak Pakai` `93,1%`**, dan **`C4: Matang SHM` `86,5%`** (`12,7%` turun ke `C2`).
+     - Yang goyang adalah **zona tengah kontinum (`C2: Transisi / Padat`, bertahan `78,0%`)**: **`18,3%`** anggotanya bergeser ke `C1: Dominan Kosong` ketika ukuran desa dan usia registrasi ikut menarik jarak!
+     - **Catatan tambahan:** Dari **672 desa *B-only*** (yang punya persil tapi tahun registrasinya kosong/`NaN`), **`604` desa (`89,9%`) memang duduk di `C1: Dominan Kosong`** dan `64` di `C3: HGU` — masuk akal karena tanah yang belum punya sertifikat memang nggak punya tahun terbit!
+   - **Artinya:** Penambahan luas desa + usia sertifikat tidak merusak kantong utama (HGU, Kosong, Hak Pakai), tapi memang menggeser garis potong di tengah kontinum SHM ↔ Kosong. Jadi **Variant A** tetap paling tepat sebagai model utama karena fokus murni ke profil hak tanah.
+
+2. **Sensitivitas Bobot Blok Komposisi (Decision D11):**
+   - **Bobot 50/50 (komposisi `50%` vs kepadatan/ukuran `50%`):** `ARI = 0,6969` (NMI `0,6772`) — garis besar masih sama, tapi HGU paling terasa bergeser (`Jaccard = 0,548`) karena faktor ukuran persil makin dominan.
+   - **Bobot Z-score semua kolom (komposisi `75%`, hak langka terinflasi):** `ARI = 0,6555` (NMI `0,6583`) — geng HGU makin menguat (`0,861`), tapi zona transisi `C2` (`0,691`) tertarik oleh bobot hak langka (`HGB`, `other`).
+   - **Bobot `Comp = 1` (komposisi diciutkan ke `31,9%`):** `ARI` jatuh ke **`0,5337`** (NMI `0,5115`) dan `C0: Hak Pakai` anjlok ke Jaccard **`0,360`**! Ini membuktikan keputusan **D11** di pre-processing sudah sangat pas — kalau blok komposisi diperkecil, karakter hak tanah langsung tenggelam oleh ukuran fisik & kepadatan persil.
+
+---
+
+### 4. Vonis Step 3 (Lampu Hijau ke Step 4!)
+- **`K-Means (k = 5)` pada Variant A (`X_A_scaled.csv`) resmi lulus uji ketahanan:** super stabil secara internal (`Multi-Seed ARI 0,989`, `Bootstrap ARI 0,985`, semua geng `Jaccard > 0,987`), dan perilaku sensitivitasnya terhadap Variant B / bobot D11 sepenuhnya wajar serta bisa dijelaskan secara transparan.
+- **Lanjut ke Step 4:** Saatnya buka buku contekan [interpretation_columns.csv](file:///Users/otnansirk/S2-MMI/DATA-SCIENCE/spatial-pertanahan-nasional/data/clustering_ready/interpretation_columns.csv) & [village_ids.csv](file:///Users/otnansirk/S2-MMI/DATA-SCIENCE/spatial-pertanahan-nasional/data/clustering_ready/village_ids.csv) untuk cek **apakah 5 geng ini cuma nge-copy peta provinsi (Cramér's V)** dan **membongkar profil lengkapnya (RDTR, tahun pendaftaran, tipe wilayah, dan catatan banjir)**!
