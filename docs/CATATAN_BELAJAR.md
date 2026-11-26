@@ -10,7 +10,7 @@
 - [x] **Step 1:** Cek Ombak — Kenalan sama `X_A_scaled.csv` & Uji *Cluster Tendency*
 - [x] **Step 2:** Adu "Mak Comblang" — Eksperimen Algoritma Clustering (K-Means, GMM, HDBSCAN) & Pilih $k$
 - [x] **Step 3:** Tes Anti-Goyah — Uji Stabilitas & Sensitivitas (*Seed*, *Bootstrap*, Variant A vs B)
-- [ ] **Step 4:** Sesi Kepo — Cek Bias Geografis & Bongkar Profil Tiap Geng
+- [x] **Step 4:** Sesi Kepo — Cek Bias Geografis & Bongkar Profil Tiap Geng
 - [ ] **Step 5:** Kasih Julukan & Bikin Rekomendasi Kebijakan (Termasuk Grup `place_later`)
 
 ---
@@ -297,3 +297,58 @@ Nah, pas aturannya diganti (fitur ditambah atau bobot digeser), ini yang terbong
 ### 4. Vonis Step 3 (Lampu Hijau ke Step 4!)
 - **`K-Means (k = 5)` pada Variant A (`X_A_scaled.csv`) resmi lulus uji ketahanan:** super stabil secara internal (`Multi-Seed ARI 0,989`, `Bootstrap ARI 0,985`, semua geng `Jaccard > 0,987`), dan perilaku sensitivitasnya terhadap Variant B / bobot D11 sepenuhnya wajar serta bisa dijelaskan secara transparan.
 - **Lanjut ke Step 4:** Saatnya buka buku contekan [interpretation_columns.csv](file:///Users/otnansirk/S2-MMI/DATA-SCIENCE/spatial-pertanahan-nasional/data/clustering_ready/interpretation_columns.csv) & [village_ids.csv](file:///Users/otnansirk/S2-MMI/DATA-SCIENCE/spatial-pertanahan-nasional/data/clustering_ready/village_ids.csv) untuk cek **apakah 5 geng ini cuma nge-copy peta provinsi (Cramér's V)** dan **membongkar profil lengkapnya (RDTR, tahun pendaftaran, tipe wilayah, dan catatan banjir)**!
+
+---
+
+## Step 4: Sesi Kepo — Cek Bias Geografis & Bongkar Profil Tiap Geng
+
+> Notebook: `modeling/clustering.ipynb` (Sel 4.1–4.3) | Ringkasan angka: `modeling/outputs/step4_summary.json` | Semua grafik tampil *inline* di dalam notebook
+
+### 1. Tes Bias Geografis: Jangan-jangan cuma nge-copy peta provinsi?
+Begitu 5 geng `K-Means (k = 5)` dicocokkan dengan nama provinsi dan kabupaten di [village_ids.csv](file:///Users/otnansirk/S2-MMI/DATA-SCIENCE/spatial-pertanahan-nasional/data/clustering_ready/village_ids.csv), ini skor **Cramér's V** (*bias-corrected*) dan **NMI**-nya:
+
+| Variabel Eksternal | Cramér's V | NMI | Artinya |
+| :--- | :---: | :---: | :--- |
+| **Kabupaten/Kota (506)** | `0,418` | `0,093` | Sedang — ada pola lokal per kabupaten, bukan seragam semua |
+| **Provinsi (34)** | `0,325` | `0,088` | Sedang — **bukan fotokopi peta provinsi!** (>91% variasi klaster bukan sekadar label provinsi) |
+| **Flag Overshoot (1–10×)** | `0,283` | `0,061` | Berkorelasi cukup nyata dengan struktur kepadatan klaster |
+| **Punya Dokumen RDTR (>0)** | `0,218` | `0,026` | Kesiapan tata ruang ikut membedakan profil geng |
+| **Tipe (Desa vs Kelurahan)** | `0,169` | `0,015` | Ada kecenderungan urban-rural, tapi tidak kaku |
+| **Flag Flood All-Zero\* (Ambigu)** | `0,111` | `0,007` | Lemah — lebih mencerminkan pola regional pemetaan banjir |
+
+> **Kesimpulan cek bias:** 5 geng ini **lulus** — mereka bukan sekadar peta provinsi yang diganti warna, melainkan betul-betul memotret **struktur hukum & kepadatan pertanahan**!
+
+---
+
+### 2. Plot Twist Terbesar di Step 4: Kenapa Jakarta & Bali Bukan di `Matang SHM`?!
+Ini temuan paling "wah" begitu kita buka [interpretation_columns.csv](file:///Users/otnansirk/S2-MMI/DATA-SCIENCE/spatial-pertanahan-nasional/data/clustering_ready/interpretation_columns.csv):
+
+- Banyak orang bakal mengira provinsi paling maju seperti **DKI Jakarta (`93,6%` desa!)**, **Bali (`89,9%`)**, **DIY (`82,6%`)**, **Jateng (`75,0%`)**, dan **Jatim (`70,6%`)** ada di geng `C4: Matang SHM`. **Ternyata mereka ngumpul di `C2: Transisi / Padat`!**
+- **Kenapa?** Karena di Jawa–Bali–Perkotaan, hampir seluruh permukaan desanya **sudah penuh dipetakan** (median **`2.088` persil** dalam desa yang mungil `268,7 ha`, median **`coverage` = `0,896`**, **`23,5%` mengalami *overshoot***, sejarah sertifikat tertua sejak **`1977`**, dan paling siap tata ruang: **`28,1%` punya RDTR** dengan median cakupan `98,5%`!). Karena bidangnya ribuan dan sangat aktif, masih ada sisa **~31% bidang `Kosong`** plus porsi **HGB** & **Hak Pakai** yang belum rampung.
+- Sebaliknya, geng **`C4: Matang SHM`** (tinggi di **Bengkulu `60,7%`**, **Sulbar `55,3%`**, **Lampung `53,5%`**, **NTT `53,4%`**, **Sulteng `52,9%`**) memang punya **median SHM `92,4%`** di antara bidang tanah yang *sudah* tergambar di peta BPN, **TAPI** jumlah persilnya relatif sedikit (median **`368` persil** di desa seluas `783,6 ha`, **`coverage` cuma `0,163` = `16,3%` luas desa!**). Artinya, di luar bidang SHM yang sudah tercatat itu, masih banyak wilayah desa yang belum masuk peta persil (mis. kawasan hutan/non-persil atau belum terpetakan).
+
+> **Pelajaran emas:** Tanpa cek `interpretation_columns.csv`, kita bisa salah menyimpulkan tingkat kesiapan *Desa Lengkap* antara `C4` vs `C2`!
+
+---
+
+### 3. Rapor Lengkap 5 Geng (di luar fitur input model)
+
+| Geng (Jumlah Desa, %) | Watak Inti | Fisik & Kepadatan | Tata Ruang & Kronologi | Provinsi Menonjol & Contoh Desa Paling Tipikal |
+| :--- | :--- | :--- | :--- | :--- |
+| **C4: Matang SHM**<br>*(24.860 desa / `31,97%`)* | **Med SHM `92,4%`**, Kosong `2,3%` | `13,5%` Kel., med luas `784 ha`, **`368` persil**, `coverage 0,163`, overshoot `1,1%` | RDTR `10,2%`; tahun `1994`–`2025` (med `2017`); flood-zero `20,6%` | **Bengkulu (`60,7%`), Sulbar (`55,3%`), Lampung (`53,5%`), NTT (`53,4%`)**.<br>*Contoh:* `03070102` **Desa LADANG PANJANG** (Pasaman, Sumbar — SHM `94,0%`) & `20160814` **Desa Kalibong** (Bone, Sulsel — SHM `94,4%`). |
+| **C2: Transisi / Padat**<br>*(27.696 desa / `35,61%`)* | **Med SHM `58,0%`**, **Kosong `30,8%`**, Pakai `4,0%` | **`28,7%` Kel.**, desa kecil `269 ha`, **`2.088` persil**, **`coverage 0,896`**, **overshoot `23,5%`** | **RDTR `28,1%`** (med `98,5%`); tertua **`1977`–`2026`** (med `2018`); flood-zero `20,3%` | **DKI Jakarta (`93,6%`), Bali (`89,9%`), DIY (`82,6%`), Jateng (`75,0%`), Jatim (`70,6%`)**.<br>*Contoh:* `11310813` **Desa Pekiringanalit** (Pekalongan, Jateng — SHM `59,3%`, Kosong `34,1%`) & `18010810` **Kel. PANIKI SATU** (Manado, Sulut). |
+| **C1: Dominan Kosong**<br>*(19.360 desa / `24,89%`)* | **Med Kosong `76,9%`**, SHM `19,7%` | `16,8%` Kel., med luas `703 ha`, `768` persil, `coverage 0,786`, overshoot `18,0%` | RDTR `12,9%`; tahun muda `1996`–`2025` (med **`2020`**); `3,1%` tanpa tahun; flood-zero `22,2%` | **Kaltim (`52,0%`), Riau (`51,7%`), Sumbar (`49,8%`), Kalteng (`47,8%`)**; terbanyak di Aceh (`1.892`) & Sumut (`1.442`).<br>*Contoh:* `21160209` **Desa WADIABERO** (Buton Tengah, Sultra — Kosong `79,4%`) & `01140314` **Desa Blang Muko** (Nagan Raya, Aceh). |
+| **C3: Perkebunan HGU**<br>*(3.068 desa / `3,94%`)* | **Med HGU `64,2%`**, SHM `10,4%`, Kosong `7,3%` | `14,4%` Kel., **raksasa `4.045 ha`**, `482` persil, `coverage 0,522`, **overshoot `20,6%`** | RDTR `8,9%`; tahun `1996`–`2025` (med `2018`); flood-zero terendah **`6,1%`** | **Kalbar (`23,1%`, lift `5,85×`), Kaltim (`22,1%`), Kalteng (`16,8%`), Kaltara (`15,7%`), Babel (`12,4%`)**.<br>*Contoh:* `15130708` **Desa SIONG** (Barito Timur, Kalteng — HGU `67,7%`) & `14071209` **Desa BAYUN SARI** (Ketapang, Kalbar). |
+| **C0: Hak Pakai (Pem/Fasum)**<br>*(2.786 desa / `3,58%`)* | **Med Pakai `70,8%`**, SHM `9,6%`, Kosong `0,0%` | `14,2%` Kel., `543 ha`, **cuma `9` persil**, **`coverage 0,007`**, overshoot `1,2%` | RDTR `9,0%`; paling baru **`2014`–`2024`** (rentang `9` thn); **flood-zero tertinggi `38,7%`** | **Papua (`27,5%`, lift `7,68×`), Papua Barat (`15,4%`), NTT (`10,6%`), Sumut (`8,4%`), Maluku (`7,4%`)**.<br>*Contoh:* `26011305` **Desa SOSIRI** (Jayapura, Papua — Hak Pakai `80,5%`) & `19081119` **Desa salepae** (Parigi Moutong, Sulteng). |
+
+*(Catatan wajib soal banjir: Variasi `flood_all_zero%` dari `6,1%` di C3 sampai `38,7%` di C0 **tidak boleh** disimpulkan sebagai bukti perbedaan risiko banjir fisik, karena `21,8%` nilai nol pada data banjir bersifat ambigu secara regional — lihat Step 0 & README).*
+
+---
+
+### 4. Vonis Step 4 (Tinggal Selangkah Menuju Finish!)
+Kelima geng kini sudah **punya bukti kuat, anti-goyah, bebas bias provinsi semata, dan profil kebijakannya super jelas** — termasuk temuan krusial soal *coverage* antara `C4` vs `C2` dan posisi `C1` sebagai prioritas utama sertifikasi PTSL!
+
+Di **Step 5 (Final)** kita tinggal:
+1. Memberi **julukan resmi** yang mudah dipahami pembuat kebijakan untuk tiap geng,
+2. Menggabungkan seluruh **79.842 desa** dengan melaporkan kelompok **`place_later.csv`** secara eksplisit (**1.950 desa tanpa persil** sebagai kelompok ke-6 *"Belum Terpetakan"* + **122 baris tereksklusi** sebagai *"Perlu Audit Data"*),
+3. Mengekspor tabel hasil segmentasi akhir & merangkum **rekomendasi prioritas kebijakan ATR/BPN**.

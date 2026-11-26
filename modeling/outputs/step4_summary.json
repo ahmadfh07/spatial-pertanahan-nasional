@@ -1,0 +1,1044 @@
+{
+  "associations": [
+    {
+      "variabel": "provinsi",
+      "deskripsi": "Provinsi (34)",
+      "n_kategori": 34,
+      "cramers_v_std": 0.3259815117423894,
+      "cramers_v_corr": 0.3253383722663827,
+      "nmi": 0.08802838932604938
+    },
+    {
+      "variabel": "kab_key",
+      "deskripsi": "Kabupaten/Kota (506)",
+      "n_kategori": 506,
+      "cramers_v_std": 0.42535152061882003,
+      "cramers_v_corr": 0.4176593088611311,
+      "nmi": 0.09298797347973892
+    },
+    {
+      "variabel": "tipe",
+      "deskripsi": "Tipe Wilayah (Desa vs Kelurahan)",
+      "n_kategori": 2,
+      "cramers_v_std": 0.16913498423277087,
+      "cramers_v_corr": 0.16898395101254404,
+      "nmi": 0.015316533655217082
+    },
+    {
+      "variabel": "is_overshoot",
+      "deskripsi": "Flag Overshoot (Luas Persil 1-10x)",
+      "n_kategori": 2,
+      "cramers_v_std": 0.2830006017760775,
+      "cramers_v_corr": 0.28291153284663867,
+      "nmi": 0.06077560664722307
+    },
+    {
+      "variabel": "rdtr_has",
+      "deskripsi": "Punya Dokumen RDTR (>0)",
+      "n_kategori": 2,
+      "cramers_v_std": 0.21826913905958403,
+      "cramers_v_corr": 0.21815268652433176,
+      "nmi": 0.025874897465358145
+    },
+    {
+      "variabel": "flood_all_zero",
+      "deskripsi": "Flag Flood All-Zero* (Ambigu)",
+      "n_kategori": 2,
+      "cramers_v_std": 0.11127412773180316,
+      "cramers_v_corr": 0.11104348554149407,
+      "nmi": 0.007073888140718211
+    }
+  ],
+  "master_profile": [
+    {
+      "geng": "C4: Matang SHM",
+      "cluster_id": 4,
+      "n_desa": 24860,
+      "pct_fit": 31.97,
+      "Kelurahan%": 13.5,
+      "med_luas_ha": 783.6,
+      "med_persil": 368,
+      "med_coverage": 0.163,
+      "overshoot%": 1.1,
+      "med_SHM%": 92.4,
+      "med_Kosong%": 2.3,
+      "med_HGU%": 0.0,
+      "med_Pakai%": 0.8,
+      "med_HGB%": 0.0,
+      "med_Titled%": 97.7,
+      "rdtr_has%": 10.2,
+      "med_rdtr_if_has%": 33.9,
+      "has_year%": 100.0,
+      "med_tahun_min": 1994,
+      "med_tahun_median": 2017,
+      "med_tahun_max": 2025,
+      "med_year_span": 30,
+      "med_age_median": 9,
+      "flood_all_zero%": 20.6,
+      "cond_med_flood_any%": 30.3,
+      "cond_med_flood_high%": 12.4
+    },
+    {
+      "geng": "C2: Transisi / Padat",
+      "cluster_id": 2,
+      "n_desa": 27696,
+      "pct_fit": 35.61,
+      "Kelurahan%": 28.7,
+      "med_luas_ha": 268.7,
+      "med_persil": 2088,
+      "med_coverage": 0.896,
+      "overshoot%": 23.5,
+      "med_SHM%": 58.0,
+      "med_Kosong%": 30.8,
+      "med_HGU%": 0.0,
+      "med_Pakai%": 4.0,
+      "med_HGB%": 0.1,
+      "med_Titled%": 69.2,
+      "rdtr_has%": 28.1,
+      "med_rdtr_if_has%": 98.5,
+      "has_year%": 100.0,
+      "med_tahun_min": 1977,
+      "med_tahun_median": 2018,
+      "med_tahun_max": 2026,
+      "med_year_span": 49,
+      "med_age_median": 8,
+      "flood_all_zero%": 20.3,
+      "cond_med_flood_any%": 50.4,
+      "cond_med_flood_high%": 14.7
+    },
+    {
+      "geng": "C1: Dominan Kosong",
+      "cluster_id": 1,
+      "n_desa": 19360,
+      "pct_fit": 24.89,
+      "Kelurahan%": 16.8,
+      "med_luas_ha": 702.8,
+      "med_persil": 768,
+      "med_coverage": 0.786,
+      "overshoot%": 18.0,
+      "med_SHM%": 19.7,
+      "med_Kosong%": 76.9,
+      "med_HGU%": 0.0,
+      "med_Pakai%": 0.3,
+      "med_HGB%": 0.0,
+      "med_Titled%": 23.1,
+      "rdtr_has%": 12.9,
+      "med_rdtr_if_has%": 44.3,
+      "has_year%": 96.9,
+      "med_tahun_min": 1996,
+      "med_tahun_median": 2020,
+      "med_tahun_max": 2025,
+      "med_year_span": 29,
+      "med_age_median": 6,
+      "flood_all_zero%": 22.2,
+      "cond_med_flood_any%": 31.9,
+      "cond_med_flood_high%": 13.3
+    },
+    {
+      "geng": "C3: Perkebunan HGU",
+      "cluster_id": 3,
+      "n_desa": 3068,
+      "pct_fit": 3.94,
+      "Kelurahan%": 14.4,
+      "med_luas_ha": 4044.9,
+      "med_persil": 482,
+      "med_coverage": 0.522,
+      "overshoot%": 20.6,
+      "med_SHM%": 10.4,
+      "med_Kosong%": 7.3,
+      "med_HGU%": 64.2,
+      "med_Pakai%": 0.1,
+      "med_HGB%": 0.0,
+      "med_Titled%": 92.7,
+      "rdtr_has%": 8.9,
+      "med_rdtr_if_has%": 9.2,
+      "has_year%": 97.9,
+      "med_tahun_min": 1996,
+      "med_tahun_median": 2018,
+      "med_tahun_max": 2025,
+      "med_year_span": 28,
+      "med_age_median": 8,
+      "flood_all_zero%": 6.1,
+      "cond_med_flood_any%": 34.0,
+      "cond_med_flood_high%": 16.8
+    },
+    {
+      "geng": "C0: Hak Pakai (Pem/Fasum)",
+      "cluster_id": 0,
+      "n_desa": 2786,
+      "pct_fit": 3.58,
+      "Kelurahan%": 14.2,
+      "med_luas_ha": 542.5,
+      "med_persil": 9,
+      "med_coverage": 0.007,
+      "overshoot%": 1.2,
+      "med_SHM%": 9.6,
+      "med_Kosong%": 0.0,
+      "med_HGU%": 0.0,
+      "med_Pakai%": 70.8,
+      "med_HGB%": 0.0,
+      "med_Titled%": 100.0,
+      "rdtr_has%": 9.0,
+      "med_rdtr_if_has%": 81.1,
+      "has_year%": 99.9,
+      "med_tahun_min": 2014,
+      "med_tahun_median": 2020,
+      "med_tahun_max": 2024,
+      "med_year_span": 9,
+      "med_age_median": 6,
+      "flood_all_zero%": 38.7,
+      "cond_med_flood_any%": 29.1,
+      "cond_med_flood_high%": 10.5
+    }
+  ],
+  "mean_composition": [
+    {
+      "geng": "C4: Matang SHM",
+      "Hak Milik": 89.01,
+      "Kosong": 5.72,
+      "HGU": 0.37,
+      "Hak Pakai": 3.43,
+      "HGB": 0.99,
+      "Lainnya": 0.47
+    },
+    {
+      "geng": "C2: Transisi / Padat",
+      "Hak Milik": 56.57,
+      "Kosong": 31.32,
+      "HGU": 0.17,
+      "Hak Pakai": 7.17,
+      "HGB": 4.16,
+      "Lainnya": 0.62
+    },
+    {
+      "geng": "C1: Dominan Kosong",
+      "Hak Milik": 21.97,
+      "Kosong": 75.27,
+      "HGU": 0.4,
+      "Hak Pakai": 1.28,
+      "HGB": 0.79,
+      "Lainnya": 0.29
+    },
+    {
+      "geng": "C3: Perkebunan HGU",
+      "Hak Milik": 16.43,
+      "Kosong": 18.12,
+      "HGU": 62.81,
+      "Hak Pakai": 0.71,
+      "HGB": 1.08,
+      "Lainnya": 0.84
+    },
+    {
+      "geng": "C0: Hak Pakai (Pem/Fasum)",
+      "Hak Milik": 17.89,
+      "Kosong": 4.89,
+      "HGU": 0.04,
+      "Hak Pakai": 68.32,
+      "HGB": 6.71,
+      "Lainnya": 2.15
+    }
+  ],
+  "top_provinces_per_cluster": {
+    "C0: Hak Pakai (Pem/Fasum)": {
+      "top_share": [
+        {
+          "provinsi": "Sumatera Utara",
+          "n": 476,
+          "share_pct": 17.1
+        },
+        {
+          "provinsi": "Aceh",
+          "n": 428,
+          "share_pct": 15.4
+        },
+        {
+          "provinsi": "Nusa Tenggara Timur",
+          "n": 332,
+          "share_pct": 11.9
+        },
+        {
+          "provinsi": "Papua",
+          "n": 298,
+          "share_pct": 10.7
+        },
+        {
+          "provinsi": "Sulawesi Selatan",
+          "n": 172,
+          "share_pct": 6.2
+        }
+      ],
+      "top_lift": [
+        {
+          "provinsi": "Papua",
+          "n": 298,
+          "lift": 7.68,
+          "in_prov_pct": 27.5
+        },
+        {
+          "provinsi": "Papua Barat",
+          "n": 120,
+          "lift": 4.3,
+          "in_prov_pct": 15.4
+        },
+        {
+          "provinsi": "Nusa Tenggara Timur",
+          "n": 332,
+          "lift": 2.97,
+          "in_prov_pct": 10.6
+        },
+        {
+          "provinsi": "Sumatera Utara",
+          "n": 476,
+          "lift": 2.34,
+          "in_prov_pct": 8.4
+        },
+        {
+          "provinsi": "Maluku",
+          "n": 78,
+          "lift": 2.05,
+          "in_prov_pct": 7.4
+        }
+      ]
+    },
+    "C1: Dominan Kosong": {
+      "top_share": [
+        {
+          "provinsi": "Aceh",
+          "n": 1892,
+          "share_pct": 9.8
+        },
+        {
+          "provinsi": "Sumatera Utara",
+          "n": 1442,
+          "share_pct": 7.4
+        },
+        {
+          "provinsi": "Jawa Timur",
+          "n": 1189,
+          "share_pct": 6.1
+        },
+        {
+          "provinsi": "Jawa Barat",
+          "n": 1129,
+          "share_pct": 5.8
+        },
+        {
+          "provinsi": "Sumatera Selatan",
+          "n": 1082,
+          "share_pct": 5.6
+        }
+      ],
+      "top_lift": [
+        {
+          "provinsi": "Kalimantan Timur",
+          "n": 523,
+          "lift": 2.09,
+          "in_prov_pct": 52.0
+        },
+        {
+          "provinsi": "Riau",
+          "n": 1025,
+          "lift": 2.08,
+          "in_prov_pct": 51.7
+        },
+        {
+          "provinsi": "Sumatera Barat",
+          "n": 691,
+          "lift": 2.0,
+          "in_prov_pct": 49.8
+        },
+        {
+          "provinsi": "Kalimantan Tengah",
+          "n": 738,
+          "lift": 1.92,
+          "in_prov_pct": 47.8
+        },
+        {
+          "provinsi": "Kalimantan Utara",
+          "n": 163,
+          "lift": 1.87,
+          "in_prov_pct": 46.4
+        }
+      ]
+    },
+    "C2: Transisi / Padat": {
+      "top_share": [
+        {
+          "provinsi": "Jawa Tengah",
+          "n": 6476,
+          "share_pct": 23.4
+        },
+        {
+          "provinsi": "Jawa Timur",
+          "n": 6047,
+          "share_pct": 21.8
+        },
+        {
+          "provinsi": "Jawa Barat",
+          "n": 3661,
+          "share_pct": 13.2
+        },
+        {
+          "provinsi": "Aceh",
+          "n": 1539,
+          "share_pct": 5.6
+        },
+        {
+          "provinsi": "Banten",
+          "n": 984,
+          "share_pct": 3.6
+        }
+      ],
+      "top_lift": [
+        {
+          "provinsi": "DKI Jakarta",
+          "n": 262,
+          "lift": 2.63,
+          "in_prov_pct": 93.6
+        },
+        {
+          "provinsi": "Bali",
+          "n": 647,
+          "lift": 2.52,
+          "in_prov_pct": 89.9
+        },
+        {
+          "provinsi": "Daerah Istimewa Yogyakarta",
+          "n": 362,
+          "lift": 2.32,
+          "in_prov_pct": 82.6
+        },
+        {
+          "provinsi": "Jawa Tengah",
+          "n": 6476,
+          "lift": 2.11,
+          "in_prov_pct": 75.0
+        },
+        {
+          "provinsi": "Jawa Timur",
+          "n": 6047,
+          "lift": 1.98,
+          "in_prov_pct": 70.6
+        }
+      ]
+    },
+    "C3: Perkebunan HGU": {
+      "top_share": [
+        {
+          "provinsi": "Kalimantan Barat",
+          "n": 463,
+          "share_pct": 15.1
+        },
+        {
+          "provinsi": "Sumatera Utara",
+          "n": 355,
+          "share_pct": 11.6
+        },
+        {
+          "provinsi": "Kalimantan Tengah",
+          "n": 260,
+          "share_pct": 8.5
+        },
+        {
+          "provinsi": "Sumatera Selatan",
+          "n": 241,
+          "share_pct": 7.9
+        },
+        {
+          "provinsi": "Kalimantan Timur",
+          "n": 222,
+          "share_pct": 7.2
+        }
+      ],
+      "top_lift": [
+        {
+          "provinsi": "Kalimantan Barat",
+          "n": 463,
+          "lift": 5.85,
+          "in_prov_pct": 23.1
+        },
+        {
+          "provinsi": "Kalimantan Timur",
+          "n": 222,
+          "lift": 5.59,
+          "in_prov_pct": 22.1
+        },
+        {
+          "provinsi": "Kalimantan Tengah",
+          "n": 260,
+          "lift": 4.27,
+          "in_prov_pct": 16.8
+        },
+        {
+          "provinsi": "Kalimantan Utara",
+          "n": 55,
+          "lift": 3.97,
+          "in_prov_pct": 15.7
+        },
+        {
+          "provinsi": "Kepulauan Bangka Belitung",
+          "n": 49,
+          "lift": 3.14,
+          "in_prov_pct": 12.4
+        }
+      ]
+    },
+    "C4: Matang SHM": {
+      "top_share": [
+        {
+          "provinsi": "Sumatera Utara",
+          "n": 2450,
+          "share_pct": 9.9
+        },
+        {
+          "provinsi": "Aceh",
+          "n": 2291,
+          "share_pct": 9.2
+        },
+        {
+          "provinsi": "Nusa Tenggara Timur",
+          "n": 1669,
+          "share_pct": 6.7
+        },
+        {
+          "provinsi": "Lampung",
+          "n": 1436,
+          "share_pct": 5.8
+        },
+        {
+          "provinsi": "Sulawesi Selatan",
+          "n": 1412,
+          "share_pct": 5.7
+        }
+      ],
+      "top_lift": [
+        {
+          "provinsi": "Bengkulu",
+          "n": 991,
+          "lift": 1.9,
+          "in_prov_pct": 60.7
+        },
+        {
+          "provinsi": "Sulawesi Barat",
+          "n": 351,
+          "lift": 1.73,
+          "in_prov_pct": 55.3
+        },
+        {
+          "provinsi": "Lampung",
+          "n": 1436,
+          "lift": 1.67,
+          "in_prov_pct": 53.5
+        },
+        {
+          "provinsi": "Nusa Tenggara Timur",
+          "n": 1669,
+          "lift": 1.67,
+          "in_prov_pct": 53.4
+        },
+        {
+          "provinsi": "Sulawesi Tengah",
+          "n": 1067,
+          "lift": 1.65,
+          "in_prov_pct": 52.9
+        }
+      ]
+    }
+  },
+  "province_breakdown_34": {
+    "Bengkulu": {
+      "C4: Matang SHM": 60.72,
+      "C2: Transisi / Padat": 19.3,
+      "C1: Dominan Kosong": 16.36,
+      "C3: Perkebunan HGU": 3.0,
+      "C0: Hak Pakai (Pem/Fasum)": 0.61,
+      "n_fit": 1632
+    },
+    "Sulawesi Barat": {
+      "C4: Matang SHM": 55.28,
+      "C2: Transisi / Padat": 13.39,
+      "C1: Dominan Kosong": 27.56,
+      "C3: Perkebunan HGU": 2.36,
+      "C0: Hak Pakai (Pem/Fasum)": 1.42,
+      "n_fit": 635
+    },
+    "Lampung": {
+      "C4: Matang SHM": 53.48,
+      "C2: Transisi / Padat": 24.25,
+      "C1: Dominan Kosong": 19.4,
+      "C3: Perkebunan HGU": 2.2,
+      "C0: Hak Pakai (Pem/Fasum)": 0.67,
+      "n_fit": 2685
+    },
+    "Nusa Tenggara Timur": {
+      "C4: Matang SHM": 53.41,
+      "C2: Transisi / Padat": 9.02,
+      "C1: Dominan Kosong": 26.11,
+      "C3: Perkebunan HGU": 0.83,
+      "C0: Hak Pakai (Pem/Fasum)": 10.62,
+      "n_fit": 3125
+    },
+    "Sulawesi Tengah": {
+      "C4: Matang SHM": 52.9,
+      "C2: Transisi / Padat": 13.39,
+      "C1: Dominan Kosong": 26.38,
+      "C3: Perkebunan HGU": 3.27,
+      "C0: Hak Pakai (Pem/Fasum)": 4.07,
+      "n_fit": 2017
+    },
+    "Sulawesi Tenggara": {
+      "C4: Matang SHM": 49.23,
+      "C2: Transisi / Padat": 14.86,
+      "C1: Dominan Kosong": 31.94,
+      "C3: Perkebunan HGU": 2.6,
+      "C0: Hak Pakai (Pem/Fasum)": 1.37,
+      "n_fit": 2342
+    },
+    "Sulawesi Selatan": {
+      "C4: Matang SHM": 45.11,
+      "C2: Transisi / Padat": 25.72,
+      "C1: Dominan Kosong": 21.47,
+      "C3: Perkebunan HGU": 2.2,
+      "C0: Hak Pakai (Pem/Fasum)": 5.5,
+      "n_fit": 3130
+    },
+    "Nusa Tenggara Barat": {
+      "C4: Matang SHM": 44.94,
+      "C2: Transisi / Padat": 42.37,
+      "C1: Dominan Kosong": 11.75,
+      "C3: Perkebunan HGU": 0.69,
+      "C0: Hak Pakai (Pem/Fasum)": 0.26,
+      "n_fit": 1166
+    },
+    "Sumatera Utara": {
+      "C4: Matang SHM": 43.06,
+      "C2: Transisi / Padat": 16.99,
+      "C1: Dominan Kosong": 25.34,
+      "C3: Perkebunan HGU": 6.24,
+      "C0: Hak Pakai (Pem/Fasum)": 8.37,
+      "n_fit": 5690
+    },
+    "Sumatera Selatan": {
+      "C4: Matang SHM": 42.02,
+      "C2: Transisi / Padat": 14.61,
+      "C1: Dominan Kosong": 32.59,
+      "C3: Perkebunan HGU": 7.26,
+      "C0: Hak Pakai (Pem/Fasum)": 3.52,
+      "n_fit": 3320
+    },
+    "Jambi": {
+      "C4: Matang SHM": 40.6,
+      "C2: Transisi / Padat": 14.3,
+      "C1: Dominan Kosong": 37.48,
+      "C3: Perkebunan HGU": 6.87,
+      "C0: Hak Pakai (Pem/Fasum)": 0.75,
+      "n_fit": 1601
+    },
+    "Kalimantan Barat": {
+      "C4: Matang SHM": 39.08,
+      "C2: Transisi / Padat": 7.78,
+      "C1: Dominan Kosong": 28.71,
+      "C3: Perkebunan HGU": 23.08,
+      "C0: Hak Pakai (Pem/Fasum)": 1.35,
+      "n_fit": 2006
+    },
+    "Maluku": {
+      "C4: Matang SHM": 38.68,
+      "C2: Transisi / Padat": 12.08,
+      "C1: Dominan Kosong": 41.23,
+      "C3: Perkebunan HGU": 0.66,
+      "C0: Hak Pakai (Pem/Fasum)": 7.36,
+      "n_fit": 1060
+    },
+    "Aceh": {
+      "C4: Matang SHM": 36.45,
+      "C2: Transisi / Padat": 24.49,
+      "C1: Dominan Kosong": 30.1,
+      "C3: Perkebunan HGU": 2.15,
+      "C0: Hak Pakai (Pem/Fasum)": 6.81,
+      "n_fit": 6285
+    },
+    "Papua Barat": {
+      "C4: Matang SHM": 35.69,
+      "C2: Transisi / Padat": 14.76,
+      "C1: Dominan Kosong": 26.19,
+      "C3: Perkebunan HGU": 7.96,
+      "C0: Hak Pakai (Pem/Fasum)": 15.4,
+      "n_fit": 779
+    },
+    "Maluku Utara": {
+      "C4: Matang SHM": 35.55,
+      "C2: Transisi / Padat": 18.39,
+      "C1: Dominan Kosong": 42.64,
+      "C3: Perkebunan HGU": 0.7,
+      "C0: Hak Pakai (Pem/Fasum)": 2.71,
+      "n_fit": 1142
+    },
+    "Kalimantan Selatan": {
+      "C4: Matang SHM": 35.07,
+      "C2: Transisi / Padat": 26.21,
+      "C1: Dominan Kosong": 28.74,
+      "C3: Perkebunan HGU": 7.4,
+      "C0: Hak Pakai (Pem/Fasum)": 2.58,
+      "n_fit": 2053
+    },
+    "Papua": {
+      "C4: Matang SHM": 34.07,
+      "C2: Transisi / Padat": 11.17,
+      "C1: Dominan Kosong": 21.24,
+      "C3: Perkebunan HGU": 6.0,
+      "C0: Hak Pakai (Pem/Fasum)": 27.52,
+      "n_fit": 1083
+    },
+    "Sulawesi Utara": {
+      "C4: Matang SHM": 31.66,
+      "C2: Transisi / Padat": 20.86,
+      "C1: Dominan Kosong": 42.76,
+      "C3: Perkebunan HGU": 0.83,
+      "C0: Hak Pakai (Pem/Fasum)": 3.89,
+      "n_fit": 1927
+    },
+    "Kalimantan Tengah": {
+      "C4: Matang SHM": 30.16,
+      "C2: Transisi / Padat": 4.08,
+      "C1: Dominan Kosong": 47.77,
+      "C3: Perkebunan HGU": 16.83,
+      "C0: Hak Pakai (Pem/Fasum)": 1.17,
+      "n_fit": 1545
+    },
+    "Riau": {
+      "C4: Matang SHM": 29.23,
+      "C2: Transisi / Padat": 8.93,
+      "C1: Dominan Kosong": 51.74,
+      "C3: Perkebunan HGU": 8.18,
+      "C0: Hak Pakai (Pem/Fasum)": 1.92,
+      "n_fit": 1981
+    },
+    "Sumatera Barat": {
+      "C4: Matang SHM": 28.19,
+      "C2: Transisi / Padat": 16.15,
+      "C1: Dominan Kosong": 49.82,
+      "C3: Perkebunan HGU": 2.38,
+      "C0: Hak Pakai (Pem/Fasum)": 3.46,
+      "n_fit": 1387
+    },
+    "Kepulauan Bangka Belitung": {
+      "C4: Matang SHM": 25.57,
+      "C2: Transisi / Padat": 25.32,
+      "C1: Dominan Kosong": 35.7,
+      "C3: Perkebunan HGU": 12.41,
+      "C0: Hak Pakai (Pem/Fasum)": 1.01,
+      "n_fit": 395
+    },
+    "Kalimantan Utara": {
+      "C4: Matang SHM": 25.36,
+      "C2: Transisi / Padat": 11.4,
+      "C1: Dominan Kosong": 46.44,
+      "C3: Perkebunan HGU": 15.67,
+      "C0: Hak Pakai (Pem/Fasum)": 1.14,
+      "n_fit": 351
+    },
+    "Gorontalo": {
+      "C4: Matang SHM": 24.18,
+      "C2: Transisi / Padat": 39.01,
+      "C1: Dominan Kosong": 29.95,
+      "C3: Perkebunan HGU": 5.36,
+      "C0: Hak Pakai (Pem/Fasum)": 1.51,
+      "n_fit": 728
+    },
+    "Kepulauan Riau": {
+      "C4: Matang SHM": 21.35,
+      "C2: Transisi / Padat": 26.8,
+      "C1: Dominan Kosong": 45.75,
+      "C3: Perkebunan HGU": 2.83,
+      "C0: Hak Pakai (Pem/Fasum)": 3.27,
+      "n_fit": 459
+    },
+    "Jawa Barat": {
+      "C4: Matang SHM": 17.24,
+      "C2: Transisi / Padat": 60.56,
+      "C1: Dominan Kosong": 18.68,
+      "C3: Perkebunan HGU": 2.3,
+      "C0: Hak Pakai (Pem/Fasum)": 1.22,
+      "n_fit": 6045
+    },
+    "Banten": {
+      "C4: Matang SHM": 15.79,
+      "C2: Transisi / Padat": 62.92,
+      "C1: Dominan Kosong": 18.86,
+      "C3: Perkebunan HGU": 1.34,
+      "C0: Hak Pakai (Pem/Fasum)": 1.09,
+      "n_fit": 1564
+    },
+    "Jawa Tengah": {
+      "C4: Matang SHM": 15.57,
+      "C2: Transisi / Padat": 75.01,
+      "C1: Dominan Kosong": 8.61,
+      "C3: Perkebunan HGU": 0.32,
+      "C0: Hak Pakai (Pem/Fasum)": 0.49,
+      "n_fit": 8633
+    },
+    "Daerah Istimewa Yogyakarta": {
+      "C4: Matang SHM": 15.3,
+      "C2: Transisi / Padat": 82.65,
+      "C1: Dominan Kosong": 2.05,
+      "C3: Perkebunan HGU": 0.0,
+      "C0: Hak Pakai (Pem/Fasum)": 0.0,
+      "n_fit": 438
+    },
+    "Jawa Timur": {
+      "C4: Matang SHM": 13.2,
+      "C2: Transisi / Padat": 70.64,
+      "C1: Dominan Kosong": 13.89,
+      "C3: Perkebunan HGU": 0.91,
+      "C0: Hak Pakai (Pem/Fasum)": 1.36,
+      "n_fit": 8560
+    },
+    "Kalimantan Timur": {
+      "C4: Matang SHM": 13.12,
+      "C2: Transisi / Padat": 10.54,
+      "C1: Dominan Kosong": 51.99,
+      "C3: Perkebunan HGU": 22.07,
+      "C0: Hak Pakai (Pem/Fasum)": 2.29,
+      "n_fit": 1006
+    },
+    "Bali": {
+      "C4: Matang SHM": 4.03,
+      "C2: Transisi / Padat": 89.86,
+      "C1: Dominan Kosong": 5.97,
+      "C3: Perkebunan HGU": 0.14,
+      "C0: Hak Pakai (Pem/Fasum)": 0.0,
+      "n_fit": 720
+    },
+    "DKI Jakarta": {
+      "C4: Matang SHM": 1.07,
+      "C2: Transisi / Padat": 93.57,
+      "C1: Dominan Kosong": 3.93,
+      "C3: Perkebunan HGU": 0.36,
+      "C0: Hak Pakai (Pem/Fasum)": 1.07,
+      "n_fit": 280
+    }
+  },
+  "typical_villages_per_cluster": {
+    "C4: Matang SHM": [
+      {
+        "geng": "C4: Matang SHM",
+        "kode8": "03070102",
+        "nama": "LADANG PANJANG",
+        "tipe": "Desa",
+        "kabupaten": "Pasaman",
+        "provinsi": "Sumatera Barat",
+        "persil": 2175,
+        "SHM%": 94.0,
+        "Kosong%": 3.9,
+        "HGU%": 0.0,
+        "Pakai%": 1.7,
+        "tahun_median": 2019
+      },
+      {
+        "geng": "C4: Matang SHM",
+        "kode8": "20160814",
+        "nama": "Kalibong",
+        "tipe": "Desa",
+        "kabupaten": "Bone",
+        "provinsi": "Sulawesi Selatan",
+        "persil": 200,
+        "SHM%": 94.4,
+        "Kosong%": 3.8,
+        "HGU%": 0.0,
+        "Pakai%": 1.7,
+        "tahun_median": 2016
+      },
+      {
+        "geng": "C4: Matang SHM",
+        "kode8": "02150909",
+        "nama": "Lobu Siregar I",
+        "tipe": "Desa",
+        "kabupaten": "Tapanuli Utara",
+        "provinsi": "Sumatera Utara",
+        "persil": 1279,
+        "SHM%": 93.2,
+        "Kosong%": 5.1,
+        "HGU%": 0.0,
+        "Pakai%": 1.6,
+        "tahun_median": 2018
+      }
+    ],
+    "C2: Transisi / Padat": [
+      {
+        "geng": "C2: Transisi / Padat",
+        "kode8": "11310813",
+        "nama": "Pekiringanalit",
+        "tipe": "Desa",
+        "kabupaten": "Pekalongan",
+        "provinsi": "Jawa Tengah",
+        "persil": 1820,
+        "SHM%": 59.3,
+        "Kosong%": 34.1,
+        "HGU%": 0.0,
+        "Pakai%": 5.0,
+        "tahun_median": 1998
+      },
+      {
+        "geng": "C2: Transisi / Padat",
+        "kode8": "11320514",
+        "nama": "SURJO",
+        "tipe": "Desa",
+        "kabupaten": "BATANG",
+        "provinsi": "Jawa Tengah",
+        "persil": 4583,
+        "SHM%": 62.5,
+        "Kosong%": 31.7,
+        "HGU%": 0.0,
+        "Pakai%": 4.4,
+        "tahun_median": 2020
+      },
+      {
+        "geng": "C2: Transisi / Padat",
+        "kode8": "18010810",
+        "nama": "PANIKI SATU",
+        "tipe": "Kelurahan",
+        "kabupaten": "MANADO",
+        "provinsi": "Sulawesi Utara",
+        "persil": 922,
+        "SHM%": 59.8,
+        "Kosong%": 34.8,
+        "HGU%": 0.0,
+        "Pakai%": 3.9,
+        "tahun_median": 2024
+      }
+    ],
+    "C1: Dominan Kosong": [
+      {
+        "geng": "C1: Dominan Kosong",
+        "kode8": "21160209",
+        "nama": "WADIABERO",
+        "tipe": "Desa",
+        "kabupaten": "Buton Tengah",
+        "provinsi": "Sulawesi Tenggara",
+        "persil": 761,
+        "SHM%": 20.0,
+        "Kosong%": 79.4,
+        "HGU%": 0.0,
+        "Pakai%": 0.6,
+        "tahun_median": 2020
+      },
+      {
+        "geng": "C1: Dominan Kosong",
+        "kode8": "01140314",
+        "nama": "Blang Muko",
+        "tipe": "Desa",
+        "kabupaten": "Nagan Raya",
+        "provinsi": "Aceh",
+        "persil": 1247,
+        "SHM%": 21.4,
+        "Kosong%": 78.1,
+        "HGU%": 0.0,
+        "Pakai%": 0.6,
+        "tahun_median": 2025
+      },
+      {
+        "geng": "C1: Dominan Kosong",
+        "kode8": "21150106",
+        "nama": "MAJAPAHIT",
+        "tipe": "Kelurahan",
+        "kabupaten": "Buton Selatan",
+        "provinsi": "Sulawesi Tenggara",
+        "persil": 1228,
+        "SHM%": 18.3,
+        "Kosong%": 81.1,
+        "HGU%": 0.0,
+        "Pakai%": 0.6,
+        "tahun_median": 2019
+      }
+    ],
+    "C3: Perkebunan HGU": [
+      {
+        "geng": "C3: Perkebunan HGU",
+        "kode8": "15130708",
+        "nama": "SIONG",
+        "tipe": "Desa",
+        "kabupaten": "Barito Timur",
+        "provinsi": "Kalimantan Tengah",
+        "persil": 629,
+        "SHM%": 16.3,
+        "Kosong%": 15.7,
+        "HGU%": 67.7,
+        "Pakai%": 0.3,
+        "tahun_median": 2016
+      },
+      {
+        "geng": "C3: Perkebunan HGU",
+        "kode8": "14071209",
+        "nama": "BAYUN SARI",
+        "tipe": "Desa",
+        "kabupaten": "Ketapang",
+        "provinsi": "Kalimantan Barat",
+        "persil": 718,
+        "SHM%": 15.9,
+        "Kosong%": 10.7,
+        "HGU%": 73.4,
+        "Pakai%": 0.0,
+        "tahun_median": 2022
+      },
+      {
+        "geng": "C3: Perkebunan HGU",
+        "kode8": "14070902",
+        "nama": "BANJAR SARI",
+        "tipe": "Desa",
+        "kabupaten": "Ketapang",
+        "provinsi": "Kalimantan Barat",
+        "persil": 2919,
+        "SHM%": 14.5,
+        "Kosong%": 15.3,
+        "HGU%": 69.7,
+        "Pakai%": 0.0,
+        "tahun_median": 2019
+      }
+    ],
+    "C0: Hak Pakai (Pem/Fasum)": [
+      {
+        "geng": "C0: Hak Pakai (Pem/Fasum)",
+        "kode8": "26011305",
+        "nama": "SOSIRI",
+        "tipe": "Desa",
+        "kabupaten": "Jayapura",
+        "provinsi": "Papua",
+        "persil": 49,
+        "SHM%": 15.6,
+        "Kosong%": 2.1,
+        "HGU%": 0.0,
+        "Pakai%": 80.5,
+        "tahun_median": 2020
+      },
+      {
+        "geng": "C0: Hak Pakai (Pem/Fasum)",
+        "kode8": "19081119",
+        "nama": "salepae",
+        "tipe": "Desa",
+        "kabupaten": "Parigi Moutong",
+        "provinsi": "Sulawesi Tengah",
+        "persil": 18,
+        "SHM%": 11.4,
+        "Kosong%": 2.1,
+        "HGU%": 0.0,
+        "Pakai%": 83.1,
+        "tahun_median": 2014
+      },
+      {
+        "geng": "C0: Hak Pakai (Pem/Fasum)",
+        "kode8": "02101805",
+        "nama": "SIMANGAMBAT",
+        "tipe": "Desa",
+        "kabupaten": "Tapanuli Selatan",
+        "provinsi": "Sumatera Utara",
+        "persil": 19,
+        "SHM%": 15.8,
+        "Kosong%": 0.4,
+        "HGU%": 0.0,
+        "Pakai%": 81.4,
+        "tahun_median": 2024
+      }
+    ]
+  }
+}
