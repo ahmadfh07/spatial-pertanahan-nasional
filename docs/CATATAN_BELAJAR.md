@@ -399,4 +399,7 @@ Kalau nanti presentasi atau ditanya dosen/penguji, sampaikan 4 hal ini di depan 
 - **Notebook lengkap (Step 1–5, semua grafik *inline*):** `modeling/clustering.ipynb`
 - **Tabel tipologi 79.842 desa (plus jarak centroid & skor stabilitas bootstrap):** `modeling/outputs/desa_tipologi_final.csv`
 - **Tabel prioritas 506 Kabupaten/Kota:** `modeling/outputs/kabupaten_prioritas.csv`
+- **Panduan presentasi & Q&A:** `docs/PANDUAN_PRESENTASI.md`
+- **Dashboard Interaktif Streamlit (Phase 6: Deployment):** `dashboard/app.py` (konfigurasi tema `.streamlit/config.toml`)
+  - Jalankan lokal dengan: `conda activate ds-ugm && streamlit run dashboard/app.py`
 - **Jurnal belajar lengkap (Step 0–5):** `docs/CATATAN_BELAJAR.md`
